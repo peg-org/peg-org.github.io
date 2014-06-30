@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Peg\Definitions\Importer | PEG</title>
+
+	<script type="text/javascript" src="resources/combined.js?174271566"></script>
+	<script type="text/javascript" src="elementlist.js?897770143"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-Localization.html">Localization</a>
+						</li>
+				<li class="active"><a href="namespace-Peg.html">Peg<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Command.Action.html">Action<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Command.Action.Parse.html">Parse</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Peg.CommandLine.html">CommandLine</a>
+						</li>
+				<li><a href="namespace-Peg.Config.html">Config</a>
+						</li>
+				<li class="active"><a href="namespace-Peg.Definitions.html">Definitions<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Definitions.Element.html">Element</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Peg.Lexers.html">Lexers</a>
+						</li>
+				<li><a href="namespace-Peg.Plugins.html">Plugins</a>
+						</li>
+				<li><a href="namespace-Peg.Signals.html">Signals<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Signals.Definitions.html">Definitions</a>
+						</li>
+				<li><a href="namespace-Peg.Signals.Lexers.html">Lexers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Peg.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li><a href="namespace-Signals.html">Signals</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Peg.Definitions.Exporter.html">Exporter</a></li>
+				<li class="active"><a href="class-Peg.Definitions.Importer.html">Importer</a></li>
+				<li><a href="class-Peg.Definitions.Symbols.html">Symbols</a></li>
+				<li><a href="class-Peg.Definitions.Type.html">Type</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Peg.Definitions.html" title="Summary of Peg\Definitions"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Importer</h1>
+
+
+	<div class="description">
+	
+<p>Loads cached definitions into a symbols object.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Signals.Signal.html"><span>Signals\Signal</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>Peg\Definitions\Importer</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Definitions.html">Definitions</a><br />
+		
+
+		<b>Located at</b> <a href="source-class-Peg.Definitions.Importer.html#12-613" title="Go to source code">peg/definitions/importer.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Peg.Definitions.Importer.html#43-59" title="Go to source code">__construct</a>( <span><code><a href="class-Peg.Definitions.Symbols.html">Peg\Definitions\Symbols</a></code> <var>&amp; $symbols</var></span>, <span>string <var>$path</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$import_type</var> = \Peg\Definitions\Type::JSON </span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$symbols</var></dt>
+					<dd><code><code><a href="class-Peg.Definitions.Symbols.html">Peg\Definitions\Symbols</a></code></code><br>$symbols The table to populate.</dd>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>$path The path where resides the cached files.</dd>
+					<dt><var>$import_type</var></dt>
+					<dd><code>string</code><br>$import_type The type of cache files to import.</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Signals.Signal.html#___construct">Signals\Signal::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="Start" id="_Start">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_Start">#</a>
+		<code><a href="source-class-Peg.Definitions.Importer.html#61-90" title="Go to source code">Start</a>( )</code>
+
+		<div class="description short">
+			
+<p>Begin importing definitions to the symbols object specified on
+constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Begin importing definitions to the symbols object specified on
+constructor.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Signals.Signal.html#methods">Signals\Signal</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Signals.Signal.html#_Listen">Listen()</a>, 
+			<a href="class-Signals.Signal.html#_Send">Send()</a>, 
+			<a href="class-Signals.Signal.html#_Unlisten">Unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="symbols" id="$symbols">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-Peg.Definitions.Symbols.html">Peg\Definitions\Symbols</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peg.Definitions.Importer.html#17-22" title="Go to source code"><var>$symbols</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$symbols" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Reference to the symbols object that is going to be populated by the
+importer.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reference to the symbols object that is going to be populated by the
+importer.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="definitions_path" id="$definitions_path">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peg.Definitions.Importer.html#24-28" title="Go to source code"><var>$definitions_path</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$definitions_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Path where reside the cached files.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Path where reside the cached files.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="import_type" id="$import_type">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Peg.Definitions.Importer.html#30-35" title="Go to source code"><var>$import_type</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$import_type" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Format used to load the symbols.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Format used to load the symbols.</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-Peg.Definitions.Type.html">Peg\Definitions\Type</a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PEG API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
