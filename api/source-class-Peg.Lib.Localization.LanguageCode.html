@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File Localization/LanguageCode.php | PEG Api</title>
+
+	<script type="text/javascript" src="resources/combined.js?174271566"></script>
+	<script type="text/javascript" src="elementlist.js?3445220540"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Peg.html">Peg<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Peg.Lib.html">Lib<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Lib.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Lib.Command.Action.html">Action<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Lib.Command.Action.Parse.html">Parse</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Peg.Lib.CommandLine.html">CommandLine</a>
+						</li>
+				<li><a href="namespace-Peg.Lib.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-Peg.Lib.Definitions.html">Definitions<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Lib.Definitions.Element.html">Element</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Peg.Lib.Lexers.html">Lexers</a>
+						</li>
+				<li class="active"><a href="namespace-Peg.Lib.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Peg.Lib.Plugins.html">Plugins</a>
+						</li>
+				<li><a href="namespace-Peg.Lib.Signals.html">Signals<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Lib.Signals.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Lib.Signals.Data.Definitions.html">Definitions</a>
+						</li>
+				<li><a href="namespace-Peg.Lib.Signals.Data.Lexers.html">Lexers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Peg.Lib.Signals.Type.html">Type</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Peg.Lib.Utilities.html">Utilities</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Peg.Lib.Localization.Language.html">Language</a></li>
+				<li class="active"><a href="class-Peg.Lib.Localization.LanguageCode.html">LanguageCode</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Peg.Lib.Localization.html" title="Summary of Peg\Lib\Localization"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="class-Peg.Lib.Localization.LanguageCode.html" title="Summary of Peg\Lib\Localization\LanguageCode"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2">  2: </a><span class="php-comment">/**
+</span></span><span id="3" class="l"><a class="l" href="#3">  3: </a><span class="php-comment"> * @author Jefferson González
+</span></span><span id="4" class="l"><a class="l" href="#4">  4: </a><span class="php-comment"> * @license MIT
+</span></span><span id="5" class="l"><a class="l" href="#5">  5: </a><span class="php-comment"> * @link http://github.com/peg-org/peg-src Source code.
+</span></span><span id="6" class="l"><a class="l" href="#6">  6: </a><span class="php-comment"> */</span>
+</span><span id="7" class="l"><a class="l" href="#7">  7: </a>
+</span><span id="8" class="l"><a class="l" href="#8">  8: </a><span class="php-keyword1">namespace</span> Peg\Lib\Localization;
+</span><span id="9" class="l"><a class="l" href="#9">  9: </a>
+</span><span id="10" class="l"><a class="l" href="#10"> 10: </a><span class="php-comment">/**
+</span></span><span id="11" class="l"><a class="l" href="#11"> 11: </a><span class="php-comment"> * Defines a class that serves as enumeration of the different language codes
+</span></span><span id="12" class="l"><a class="l" href="#12"> 12: </a><span class="php-comment"> * that are used as the file names of each po file.
+</span></span><span id="13" class="l"><a class="l" href="#13"> 13: </a><span class="php-comment"> */</span>
+</span><span id="14" class="l"><a class="l" href="#14"> 14: </a><span class="php-keyword1">class</span> <a id="LanguageCode" href="#LanguageCode">LanguageCode</a>
+</span><span id="15" class="l"><a class="l" href="#15"> 15: </a>{
+</span><span id="16" class="l"><a class="l" href="#16"> 16: </a>
+</span><span id="17" class="l"><a class="l" href="#17"> 17: </a>    <span class="php-keyword1">const</span> <a id="AFRIKAANS" href="#AFRIKAANS">AFRIKAANS</a> = <span class="php-quote">&quot;af&quot;</span>;
+</span><span id="18" class="l"><a class="l" href="#18"> 18: </a>    <span class="php-keyword1">const</span> <a id="ALBANIAN" href="#ALBANIAN">ALBANIAN</a> = <span class="php-quote">&quot;sq&quot;</span>;
+</span><span id="19" class="l"><a class="l" href="#19"> 19: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_ALGERIA" href="#ARABIC_ALGERIA">ARABIC_ALGERIA</a> = <span class="php-quote">&quot;ar_DZ&quot;</span>;
+</span><span id="20" class="l"><a class="l" href="#20"> 20: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_BAHRAIN" href="#ARABIC_BAHRAIN">ARABIC_BAHRAIN</a> = <span class="php-quote">&quot;ar_BH&quot;</span>;
+</span><span id="21" class="l"><a class="l" href="#21"> 21: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_EGYPT" href="#ARABIC_EGYPT">ARABIC_EGYPT</a> = <span class="php-quote">&quot;ar_EG&quot;</span>;
+</span><span id="22" class="l"><a class="l" href="#22"> 22: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_IRAQ" href="#ARABIC_IRAQ">ARABIC_IRAQ</a> = <span class="php-quote">&quot;ar_IQ&quot;</span>;
+</span><span id="23" class="l"><a class="l" href="#23"> 23: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_JORDAN" href="#ARABIC_JORDAN">ARABIC_JORDAN</a> = <span class="php-quote">&quot;ar_JO&quot;</span>;
+</span><span id="24" class="l"><a class="l" href="#24"> 24: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_KUWAIT" href="#ARABIC_KUWAIT">ARABIC_KUWAIT</a> = <span class="php-quote">&quot;ar_KW&quot;</span>;
+</span><span id="25" class="l"><a class="l" href="#25"> 25: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_LEBANON" href="#ARABIC_LEBANON">ARABIC_LEBANON</a> = <span class="php-quote">&quot;ar_LB&quot;</span>;
+</span><span id="26" class="l"><a class="l" href="#26"> 26: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_LIBYA" href="#ARABIC_LIBYA">ARABIC_LIBYA</a> = <span class="php-quote">&quot;ar_LY&quot;</span>;
+</span><span id="27" class="l"><a class="l" href="#27"> 27: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_MOROCCO" href="#ARABIC_MOROCCO">ARABIC_MOROCCO</a> = <span class="php-quote">&quot;ar_MA&quot;</span>;
+</span><span id="28" class="l"><a class="l" href="#28"> 28: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_OMAN" href="#ARABIC_OMAN">ARABIC_OMAN</a> = <span class="php-quote">&quot;ar_OM&quot;</span>;
+</span><span id="29" class="l"><a class="l" href="#29"> 29: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_QATAR" href="#ARABIC_QATAR">ARABIC_QATAR</a> = <span class="php-quote">&quot;ar_QA&quot;</span>;
+</span><span id="30" class="l"><a class="l" href="#30"> 30: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_SAUDI_ARABIA" href="#ARABIC_SAUDI_ARABIA">ARABIC_SAUDI_ARABIA</a> = <span class="php-quote">&quot;ar_SA&quot;</span>;
+</span><span id="31" class="l"><a class="l" href="#31"> 31: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_SYRIA" href="#ARABIC_SYRIA">ARABIC_SYRIA</a> = <span class="php-quote">&quot;ar_SY&quot;</span>;
+</span><span id="32" class="l"><a class="l" href="#32"> 32: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_TUNISIA" href="#ARABIC_TUNISIA">ARABIC_TUNISIA</a> = <span class="php-quote">&quot;ar_TN&quot;</span>;
+</span><span id="33" class="l"><a class="l" href="#33"> 33: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_UAE" href="#ARABIC_UAE">ARABIC_UAE</a> = <span class="php-quote">&quot;ar_AE&quot;</span>;
+</span><span id="34" class="l"><a class="l" href="#34"> 34: </a>    <span class="php-keyword1">const</span> <a id="ARABIC_YEMEN" href="#ARABIC_YEMEN">ARABIC_YEMEN</a> = <span class="php-quote">&quot;ar_YE&quot;</span>;
+</span><span id="35" class="l"><a class="l" href="#35"> 35: </a>    <span class="php-keyword1">const</span> <a id="ARABIC" href="#ARABIC">ARABIC</a> = <span class="php-quote">&quot;ar&quot;</span>;
+</span><span id="36" class="l"><a class="l" href="#36"> 36: </a>    <span class="php-keyword1">const</span> <a id="ARMENIAN" href="#ARMENIAN">ARMENIAN</a> = <span class="php-quote">&quot;hy&quot;</span>;
+</span><span id="37" class="l"><a class="l" href="#37"> 37: </a>    <span class="php-keyword1">const</span> <a id="ASSAMESE" href="#ASSAMESE">ASSAMESE</a> = <span class="php-quote">&quot;as&quot;</span>;
+</span><span id="38" class="l"><a class="l" href="#38"> 38: </a>    <span class="php-keyword1">const</span> <a id="AZERI" href="#AZERI">AZERI</a> = <span class="php-quote">&quot;az&quot;</span>;
+</span><span id="39" class="l"><a class="l" href="#39"> 39: </a>    <span class="php-keyword1">const</span> <a id="BASQUE" href="#BASQUE">BASQUE</a> = <span class="php-quote">&quot;eu&quot;</span>;
+</span><span id="40" class="l"><a class="l" href="#40"> 40: </a>    <span class="php-keyword1">const</span> <a id="BELARUSIAN" href="#BELARUSIAN">BELARUSIAN</a> = <span class="php-quote">&quot;be&quot;</span>;
+</span><span id="41" class="l"><a class="l" href="#41"> 41: </a>    <span class="php-keyword1">const</span> <a id="BENGALI" href="#BENGALI">BENGALI</a> = <span class="php-quote">&quot;bn&quot;</span>;
+</span><span id="42" class="l"><a class="l" href="#42"> 42: </a>    <span class="php-keyword1">const</span> <a id="BULGARIAN" href="#BULGARIAN">BULGARIAN</a> = <span class="php-quote">&quot;bg&quot;</span>;
+</span><span id="43" class="l"><a class="l" href="#43"> 43: </a>    <span class="php-keyword1">const</span> <a id="CATALAN" href="#CATALAN">CATALAN</a> = <span class="php-quote">&quot;ca&quot;</span>;
+</span><span id="44" class="l"><a class="l" href="#44"> 44: </a>    <span class="php-keyword1">const</span> <a id="CHINESE_CHINA" href="#CHINESE_CHINA">CHINESE_CHINA</a> = <span class="php-quote">&quot;zh_CN&quot;</span>;
+</span><span id="45" class="l"><a class="l" href="#45"> 45: </a>    <span class="php-keyword1">const</span> <a id="CHINESE_HONG_KONG_SAR" href="#CHINESE_HONG_KONG_SAR">CHINESE_HONG_KONG_SAR</a> = <span class="php-quote">&quot;zh_HK&quot;</span>;
+</span><span id="46" class="l"><a class="l" href="#46"> 46: </a>    <span class="php-keyword1">const</span> <a id="CHINESE_MACAU_SAR" href="#CHINESE_MACAU_SAR">CHINESE_MACAU_SAR</a> = <span class="php-quote">&quot;zh_MO&quot;</span>;
+</span><span id="47" class="l"><a class="l" href="#47"> 47: </a>    <span class="php-keyword1">const</span> <a id="CHINESE_SINGAPORE" href="#CHINESE_SINGAPORE">CHINESE_SINGAPORE</a> = <span class="php-quote">&quot;zh_SG&quot;</span>;
+</span><span id="48" class="l"><a class="l" href="#48"> 48: </a>    <span class="php-keyword1">const</span> <a id="CHINESE_TAIWAN" href="#CHINESE_TAIWAN">CHINESE_TAIWAN</a> = <span class="php-quote">&quot;zh_TW&quot;</span>;
+</span><span id="49" class="l"><a class="l" href="#49"> 49: </a>    <span class="php-keyword1">const</span> <a id="CHINESE" href="#CHINESE">CHINESE</a> = <span class="php-quote">&quot;zh&quot;</span>;
+</span><span id="50" class="l"><a class="l" href="#50"> 50: </a>    <span class="php-keyword1">const</span> <a id="CROATIAN" href="#CROATIAN">CROATIAN</a> = <span class="php-quote">&quot;hr&quot;</span>;
+</span><span id="51" class="l"><a class="l" href="#51"> 51: </a>    <span class="php-keyword1">const</span> <a id="CZECH" href="#CZECH">CZECH</a> = <span class="php-quote">&quot;cs&quot;</span>;
+</span><span id="52" class="l"><a class="l" href="#52"> 52: </a>    <span class="php-keyword1">const</span> <a id="DANISH" href="#DANISH">DANISH</a> = <span class="php-quote">&quot;da&quot;</span>;
+</span><span id="53" class="l"><a class="l" href="#53"> 53: </a>    <span class="php-keyword1">const</span> <a id="DIVEHI" href="#DIVEHI">DIVEHI</a> = <span class="php-quote">&quot;div&quot;</span>;
+</span><span id="54" class="l"><a class="l" href="#54"> 54: </a>    <span class="php-keyword1">const</span> <a id="DUTCH_BELGIUM" href="#DUTCH_BELGIUM">DUTCH_BELGIUM</a> = <span class="php-quote">&quot;nl_BE&quot;</span>;
+</span><span id="55" class="l"><a class="l" href="#55"> 55: </a>    <span class="php-keyword1">const</span> <a id="DUTCH_NETHERLANDS" href="#DUTCH_NETHERLANDS">DUTCH_NETHERLANDS</a> = <span class="php-quote">&quot;nl&quot;</span>;
+</span><span id="56" class="l"><a class="l" href="#56"> 56: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_AUSTRALIA" href="#ENGLISH_AUSTRALIA">ENGLISH_AUSTRALIA</a> = <span class="php-quote">&quot;en_AU&quot;</span>;
+</span><span id="57" class="l"><a class="l" href="#57"> 57: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_BELIZE" href="#ENGLISH_BELIZE">ENGLISH_BELIZE</a> = <span class="php-quote">&quot;en_BZ&quot;</span>;
+</span><span id="58" class="l"><a class="l" href="#58"> 58: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_CANADA" href="#ENGLISH_CANADA">ENGLISH_CANADA</a> = <span class="php-quote">&quot;en_CA&quot;</span>;
+</span><span id="59" class="l"><a class="l" href="#59"> 59: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_IRELAND" href="#ENGLISH_IRELAND">ENGLISH_IRELAND</a> = <span class="php-quote">&quot;en_IE&quot;</span>;
+</span><span id="60" class="l"><a class="l" href="#60"> 60: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_JAMAICA" href="#ENGLISH_JAMAICA">ENGLISH_JAMAICA</a> = <span class="php-quote">&quot;en_JM&quot;</span>;
+</span><span id="61" class="l"><a class="l" href="#61"> 61: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_NEW_ZEALAND" href="#ENGLISH_NEW_ZEALAND">ENGLISH_NEW_ZEALAND</a> = <span class="php-quote">&quot;en_NZ&quot;</span>;
+</span><span id="62" class="l"><a class="l" href="#62"> 62: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_PHILIPPINES" href="#ENGLISH_PHILIPPINES">ENGLISH_PHILIPPINES</a> = <span class="php-quote">&quot;en_PH&quot;</span>;
+</span><span id="63" class="l"><a class="l" href="#63"> 63: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_SOUTH_AFRICA" href="#ENGLISH_SOUTH_AFRICA">ENGLISH_SOUTH_AFRICA</a> = <span class="php-quote">&quot;en_ZA&quot;</span>;
+</span><span id="64" class="l"><a class="l" href="#64"> 64: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_TRINIDAD" href="#ENGLISH_TRINIDAD">ENGLISH_TRINIDAD</a> = <span class="php-quote">&quot;en_TT&quot;</span>;
+</span><span id="65" class="l"><a class="l" href="#65"> 65: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_UNITED_KINGDOM" href="#ENGLISH_UNITED_KINGDOM">ENGLISH_UNITED_KINGDOM</a> = <span class="php-quote">&quot;en_GB&quot;</span>;
+</span><span id="66" class="l"><a class="l" href="#66"> 66: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_UNITED_STATES" href="#ENGLISH_UNITED_STATES">ENGLISH_UNITED_STATES</a> = <span class="php-quote">&quot;us&quot;</span>;
+</span><span id="67" class="l"><a class="l" href="#67"> 67: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH_ZIMBABWE" href="#ENGLISH_ZIMBABWE">ENGLISH_ZIMBABWE</a> = <span class="php-quote">&quot;en_ZW&quot;</span>;
+</span><span id="68" class="l"><a class="l" href="#68"> 68: </a>    <span class="php-keyword1">const</span> <a id="ENGLISH" href="#ENGLISH">ENGLISH</a> = <span class="php-quote">&quot;en&quot;</span>;
+</span><span id="69" class="l"><a class="l" href="#69"> 69: </a>    <span class="php-keyword1">const</span> <a id="ESTONIAN" href="#ESTONIAN">ESTONIAN</a> = <span class="php-quote">&quot;et&quot;</span>;
+</span><span id="70" class="l"><a class="l" href="#70"> 70: </a>    <span class="php-keyword1">const</span> <a id="FAEROESE" href="#FAEROESE">FAEROESE</a> = <span class="php-quote">&quot;fo&quot;</span>;
+</span><span id="71" class="l"><a class="l" href="#71"> 71: </a>    <span class="php-keyword1">const</span> <a id="FARSI" href="#FARSI">FARSI</a> = <span class="php-quote">&quot;fa&quot;</span>;
+</span><span id="72" class="l"><a class="l" href="#72"> 72: </a>    <span class="php-keyword1">const</span> <a id="FINNISH" href="#FINNISH">FINNISH</a> = <span class="php-quote">&quot;fi&quot;</span>;
+</span><span id="73" class="l"><a class="l" href="#73"> 73: </a>    <span class="php-keyword1">const</span> <a id="FRENCH_BELGIUM" href="#FRENCH_BELGIUM">FRENCH_BELGIUM</a> = <span class="php-quote">&quot;fr_BE&quot;</span>;
+</span><span id="74" class="l"><a class="l" href="#74"> 74: </a>    <span class="php-keyword1">const</span> <a id="FRENCH_CANADA" href="#FRENCH_CANADA">FRENCH_CANADA</a> = <span class="php-quote">&quot;fr_CA&quot;</span>;
+</span><span id="75" class="l"><a class="l" href="#75"> 75: </a>    <span class="php-keyword1">const</span> <a id="FRENCH_LUXEMBOURG" href="#FRENCH_LUXEMBOURG">FRENCH_LUXEMBOURG</a> = <span class="php-quote">&quot;fr_LU&quot;</span>;
+</span><span id="76" class="l"><a class="l" href="#76"> 76: </a>    <span class="php-keyword1">const</span> <a id="FRENCH_MONACO" href="#FRENCH_MONACO">FRENCH_MONACO</a> = <span class="php-quote">&quot;fr_MC&quot;</span>;
+</span><span id="77" class="l"><a class="l" href="#77"> 77: </a>    <span class="php-keyword1">const</span> <a id="FRENCH_SWITZERLAND" href="#FRENCH_SWITZERLAND">FRENCH_SWITZERLAND</a> = <span class="php-quote">&quot;fr_CH&quot;</span>;
+</span><span id="78" class="l"><a class="l" href="#78"> 78: </a>    <span class="php-keyword1">const</span> <a id="FRENCH_FRANCE" href="#FRENCH_FRANCE">FRENCH_FRANCE</a> = <span class="php-quote">&quot;fr&quot;</span>;
+</span><span id="79" class="l"><a class="l" href="#79"> 79: </a>    <span class="php-keyword1">const</span> <a id="FYRO_MACEDONIAN" href="#FYRO_MACEDONIAN">FYRO_MACEDONIAN</a> = <span class="php-quote">&quot;mk&quot;</span>;
+</span><span id="80" class="l"><a class="l" href="#80"> 80: </a>    <span class="php-keyword1">const</span> <a id="GAELIC" href="#GAELIC">GAELIC</a> = <span class="php-quote">&quot;gd&quot;</span>;
+</span><span id="81" class="l"><a class="l" href="#81"> 81: </a>    <span class="php-keyword1">const</span> <a id="GEORGIAN" href="#GEORGIAN">GEORGIAN</a> = <span class="php-quote">&quot;ka&quot;</span>;
+</span><span id="82" class="l"><a class="l" href="#82"> 82: </a>    <span class="php-keyword1">const</span> <a id="GERMAN_AUSTRIA" href="#GERMAN_AUSTRIA">GERMAN_AUSTRIA</a> = <span class="php-quote">&quot;de_AT&quot;</span>;
+</span><span id="83" class="l"><a class="l" href="#83"> 83: </a>    <span class="php-keyword1">const</span> <a id="GERMAN_LIECHTENSTEIN" href="#GERMAN_LIECHTENSTEIN">GERMAN_LIECHTENSTEIN</a> = <span class="php-quote">&quot;de_LI&quot;</span>;
+</span><span id="84" class="l"><a class="l" href="#84"> 84: </a>    <span class="php-keyword1">const</span> <a id="GERMAN_LUXEMBOURG" href="#GERMAN_LUXEMBOURG">GERMAN_LUXEMBOURG</a> = <span class="php-quote">&quot;de_LU&quot;</span>;
+</span><span id="85" class="l"><a class="l" href="#85"> 85: </a>    <span class="php-keyword1">const</span> <a id="GERMAN_SWITZERLAND" href="#GERMAN_SWITZERLAND">GERMAN_SWITZERLAND</a> = <span class="php-quote">&quot;de_CH&quot;</span>;
+</span><span id="86" class="l"><a class="l" href="#86"> 86: </a>    <span class="php-keyword1">const</span> <a id="GERMAN_GERMANY" href="#GERMAN_GERMANY">GERMAN_GERMANY</a> = <span class="php-quote">&quot;de&quot;</span>;
+</span><span id="87" class="l"><a class="l" href="#87"> 87: </a>    <span class="php-keyword1">const</span> <a id="GREEK" href="#GREEK">GREEK</a> = <span class="php-quote">&quot;el&quot;</span>;
+</span><span id="88" class="l"><a class="l" href="#88"> 88: </a>    <span class="php-keyword1">const</span> <a id="GUJARATI" href="#GUJARATI">GUJARATI</a> = <span class="php-quote">&quot;gu&quot;</span>;
+</span><span id="89" class="l"><a class="l" href="#89"> 89: </a>    <span class="php-keyword1">const</span> <a id="HEBREW" href="#HEBREW">HEBREW</a> = <span class="php-quote">&quot;he&quot;</span>;
+</span><span id="90" class="l"><a class="l" href="#90"> 90: </a>    <span class="php-keyword1">const</span> <a id="HINDI" href="#HINDI">HINDI</a> = <span class="php-quote">&quot;hi&quot;</span>;
+</span><span id="91" class="l"><a class="l" href="#91"> 91: </a>    <span class="php-keyword1">const</span> <a id="HUNGARIAN" href="#HUNGARIAN">HUNGARIAN</a> = <span class="php-quote">&quot;hu&quot;</span>;
+</span><span id="92" class="l"><a class="l" href="#92"> 92: </a>    <span class="php-keyword1">const</span> <a id="ICELANDIC" href="#ICELANDIC">ICELANDIC</a> = <span class="php-quote">&quot;is&quot;</span>;
+</span><span id="93" class="l"><a class="l" href="#93"> 93: </a>    <span class="php-keyword1">const</span> <a id="INDONESIAN" href="#INDONESIAN">INDONESIAN</a> = <span class="php-quote">&quot;id&quot;</span>;
+</span><span id="94" class="l"><a class="l" href="#94"> 94: </a>    <span class="php-keyword1">const</span> <a id="ITALIAN_SWITZERLAND" href="#ITALIAN_SWITZERLAND">ITALIAN_SWITZERLAND</a> = <span class="php-quote">&quot;it_CH&quot;</span>;
+</span><span id="95" class="l"><a class="l" href="#95"> 95: </a>    <span class="php-keyword1">const</span> <a id="ITALIAN_ITALY" href="#ITALIAN_ITALY">ITALIAN_ITALY</a> = <span class="php-quote">&quot;it&quot;</span>;
+</span><span id="96" class="l"><a class="l" href="#96"> 96: </a>    <span class="php-keyword1">const</span> <a id="JAPANESE" href="#JAPANESE">JAPANESE</a> = <span class="php-quote">&quot;ja&quot;</span>;
+</span><span id="97" class="l"><a class="l" href="#97"> 97: </a>    <span class="php-keyword1">const</span> <a id="KANNADA" href="#KANNADA">KANNADA</a> = <span class="php-quote">&quot;kn&quot;</span>;
+</span><span id="98" class="l"><a class="l" href="#98"> 98: </a>    <span class="php-keyword1">const</span> <a id="KAZAKH" href="#KAZAKH">KAZAKH</a> = <span class="php-quote">&quot;kk&quot;</span>;
+</span><span id="99" class="l"><a class="l" href="#99"> 99: </a>    <span class="php-keyword1">const</span> <a id="KONKANI" href="#KONKANI">KONKANI</a> = <span class="php-quote">&quot;kok&quot;</span>;
+</span><span id="100" class="l"><a class="l" href="#100">100: </a>    <span class="php-keyword1">const</span> <a id="KOREAN" href="#KOREAN">KOREAN</a> = <span class="php-quote">&quot;ko&quot;</span>;
+</span><span id="101" class="l"><a class="l" href="#101">101: </a>    <span class="php-keyword1">const</span> <a id="KYRGYZ" href="#KYRGYZ">KYRGYZ</a> = <span class="php-quote">&quot;kz&quot;</span>;
+</span><span id="102" class="l"><a class="l" href="#102">102: </a>    <span class="php-keyword1">const</span> <a id="LATVIAN" href="#LATVIAN">LATVIAN</a> = <span class="php-quote">&quot;lv&quot;</span>;
+</span><span id="103" class="l"><a class="l" href="#103">103: </a>    <span class="php-keyword1">const</span> <a id="LITHUANIAN" href="#LITHUANIAN">LITHUANIAN</a> = <span class="php-quote">&quot;lt&quot;</span>;
+</span><span id="104" class="l"><a class="l" href="#104">104: </a>    <span class="php-keyword1">const</span> <a id="MALAY" href="#MALAY">MALAY</a> = <span class="php-quote">&quot;ms&quot;</span>;
+</span><span id="105" class="l"><a class="l" href="#105">105: </a>    <span class="php-keyword1">const</span> <a id="MALAYALAM" href="#MALAYALAM">MALAYALAM</a> = <span class="php-quote">&quot;ml&quot;</span>;
+</span><span id="106" class="l"><a class="l" href="#106">106: </a>    <span class="php-keyword1">const</span> <a id="MALTESE" href="#MALTESE">MALTESE</a> = <span class="php-quote">&quot;mt&quot;</span>;
+</span><span id="107" class="l"><a class="l" href="#107">107: </a>    <span class="php-keyword1">const</span> <a id="MARATHI" href="#MARATHI">MARATHI</a> = <span class="php-quote">&quot;mr&quot;</span>;
+</span><span id="108" class="l"><a class="l" href="#108">108: </a>    <span class="php-keyword1">const</span> <a id="MONGOLIAN_CYRILLIC" href="#MONGOLIAN_CYRILLIC">MONGOLIAN_CYRILLIC</a> = <span class="php-quote">&quot;mn&quot;</span>;
+</span><span id="109" class="l"><a class="l" href="#109">109: </a>    <span class="php-keyword1">const</span> <a id="NEPALI_INDIA" href="#NEPALI_INDIA">NEPALI_INDIA</a> = <span class="php-quote">&quot;ne&quot;</span>;
+</span><span id="110" class="l"><a class="l" href="#110">110: </a>    <span class="php-keyword1">const</span> <a id="NORWEGIAN_BOKMAL" href="#NORWEGIAN_BOKMAL">NORWEGIAN_BOKMAL</a> = <span class="php-quote">&quot;no&quot;</span>;
+</span><span id="111" class="l"><a class="l" href="#111">111: </a>    <span class="php-keyword1">const</span> <a id="NORWEGIAN_NYNORSK" href="#NORWEGIAN_NYNORSK">NORWEGIAN_NYNORSK</a> = <span class="php-quote">&quot;nn_NO&quot;</span>;
+</span><span id="112" class="l"><a class="l" href="#112">112: </a>    <span class="php-keyword1">const</span> <a id="ORIYA" href="#ORIYA">ORIYA</a> = <span class="php-quote">&quot;or&quot;</span>;
+</span><span id="113" class="l"><a class="l" href="#113">113: </a>    <span class="php-keyword1">const</span> <a id="POLISH" href="#POLISH">POLISH</a> = <span class="php-quote">&quot;pl&quot;</span>;
+</span><span id="114" class="l"><a class="l" href="#114">114: </a>    <span class="php-keyword1">const</span> <a id="PORTUGUESE_BRAZIL" href="#PORTUGUESE_BRAZIL">PORTUGUESE_BRAZIL</a> = <span class="php-quote">&quot;pt_BR&quot;</span>;
+</span><span id="115" class="l"><a class="l" href="#115">115: </a>    <span class="php-keyword1">const</span> <a id="PORTUGUESE_PORTUGAL" href="#PORTUGUESE_PORTUGAL">PORTUGUESE_PORTUGAL</a> = <span class="php-quote">&quot;pt&quot;</span>;
+</span><span id="116" class="l"><a class="l" href="#116">116: </a>    <span class="php-keyword1">const</span> <a id="PUNJABI" href="#PUNJABI">PUNJABI</a> = <span class="php-quote">&quot;pa&quot;</span>;
+</span><span id="117" class="l"><a class="l" href="#117">117: </a>    <span class="php-keyword1">const</span> <a id="RHAETO_ROMANIC" href="#RHAETO_ROMANIC">RHAETO_ROMANIC</a> = <span class="php-quote">&quot;rm&quot;</span>;
+</span><span id="118" class="l"><a class="l" href="#118">118: </a>    <span class="php-keyword1">const</span> <a id="ROMANIAN_MOLDOVA" href="#ROMANIAN_MOLDOVA">ROMANIAN_MOLDOVA</a> = <span class="php-quote">&quot;ro_MD&quot;</span>;
+</span><span id="119" class="l"><a class="l" href="#119">119: </a>    <span class="php-keyword1">const</span> <a id="ROMANIAN" href="#ROMANIAN">ROMANIAN</a> = <span class="php-quote">&quot;ro&quot;</span>;
+</span><span id="120" class="l"><a class="l" href="#120">120: </a>    <span class="php-keyword1">const</span> <a id="RUSSIAN_MOLDOVA" href="#RUSSIAN_MOLDOVA">RUSSIAN_MOLDOVA</a> = <span class="php-quote">&quot;ru_MD&quot;</span>;
+</span><span id="121" class="l"><a class="l" href="#121">121: </a>    <span class="php-keyword1">const</span> <a id="RUSSIAN" href="#RUSSIAN">RUSSIAN</a> = <span class="php-quote">&quot;ru&quot;</span>;
+</span><span id="122" class="l"><a class="l" href="#122">122: </a>    <span class="php-keyword1">const</span> <a id="SANSKRIT" href="#SANSKRIT">SANSKRIT</a> = <span class="php-quote">&quot;sa&quot;</span>;
+</span><span id="123" class="l"><a class="l" href="#123">123: </a>    <span class="php-keyword1">const</span> <a id="SERBIAN" href="#SERBIAN">SERBIAN</a> = <span class="php-quote">&quot;sr&quot;</span>;
+</span><span id="124" class="l"><a class="l" href="#124">124: </a>    <span class="php-keyword1">const</span> <a id="SLOVAK" href="#SLOVAK">SLOVAK</a> = <span class="php-quote">&quot;sk&quot;</span>;
+</span><span id="125" class="l"><a class="l" href="#125">125: </a>    <span class="php-keyword1">const</span> <a id="SLOVENIAN" href="#SLOVENIAN">SLOVENIAN</a> = <span class="php-quote">&quot;ls&quot;</span>;
+</span><span id="126" class="l"><a class="l" href="#126">126: </a>    <span class="php-keyword1">const</span> <a id="SORBIAN" href="#SORBIAN">SORBIAN</a> = <span class="php-quote">&quot;sb&quot;</span>;
+</span><span id="127" class="l"><a class="l" href="#127">127: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_ARGENTINA" href="#SPANISH_ARGENTINA">SPANISH_ARGENTINA</a> = <span class="php-quote">&quot;es_AR&quot;</span>;
+</span><span id="128" class="l"><a class="l" href="#128">128: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_BOLIVIA" href="#SPANISH_BOLIVIA">SPANISH_BOLIVIA</a> = <span class="php-quote">&quot;es_BO&quot;</span>;
+</span><span id="129" class="l"><a class="l" href="#129">129: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_CHILE" href="#SPANISH_CHILE">SPANISH_CHILE</a> = <span class="php-quote">&quot;es_CL&quot;</span>;
+</span><span id="130" class="l"><a class="l" href="#130">130: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_COLOMBIA" href="#SPANISH_COLOMBIA">SPANISH_COLOMBIA</a> = <span class="php-quote">&quot;es_CO&quot;</span>;
+</span><span id="131" class="l"><a class="l" href="#131">131: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_COSTA_RICA" href="#SPANISH_COSTA_RICA">SPANISH_COSTA_RICA</a> = <span class="php-quote">&quot;es_CR&quot;</span>;
+</span><span id="132" class="l"><a class="l" href="#132">132: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_DOMINICAN_REPUBLIC" href="#SPANISH_DOMINICAN_REPUBLIC">SPANISH_DOMINICAN_REPUBLIC</a> = <span class="php-quote">&quot;es_DO&quot;</span>;
+</span><span id="133" class="l"><a class="l" href="#133">133: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_ECUADOR" href="#SPANISH_ECUADOR">SPANISH_ECUADOR</a> = <span class="php-quote">&quot;es_EC&quot;</span>;
+</span><span id="134" class="l"><a class="l" href="#134">134: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_EL_SALVADOR" href="#SPANISH_EL_SALVADOR">SPANISH_EL_SALVADOR</a> = <span class="php-quote">&quot;es_SV&quot;</span>;
+</span><span id="135" class="l"><a class="l" href="#135">135: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_GUATEMALA" href="#SPANISH_GUATEMALA">SPANISH_GUATEMALA</a> = <span class="php-quote">&quot;es_GT&quot;</span>;
+</span><span id="136" class="l"><a class="l" href="#136">136: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_HONDURAS" href="#SPANISH_HONDURAS">SPANISH_HONDURAS</a> = <span class="php-quote">&quot;es_HN&quot;</span>;
+</span><span id="137" class="l"><a class="l" href="#137">137: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_MEXICO" href="#SPANISH_MEXICO">SPANISH_MEXICO</a> = <span class="php-quote">&quot;es_MX&quot;</span>;
+</span><span id="138" class="l"><a class="l" href="#138">138: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_NICARAGUA" href="#SPANISH_NICARAGUA">SPANISH_NICARAGUA</a> = <span class="php-quote">&quot;es_NI&quot;</span>;
+</span><span id="139" class="l"><a class="l" href="#139">139: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_PANAMA" href="#SPANISH_PANAMA">SPANISH_PANAMA</a> = <span class="php-quote">&quot;es_PA&quot;</span>;
+</span><span id="140" class="l"><a class="l" href="#140">140: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_PARAGUAY" href="#SPANISH_PARAGUAY">SPANISH_PARAGUAY</a> = <span class="php-quote">&quot;es_PY&quot;</span>;
+</span><span id="141" class="l"><a class="l" href="#141">141: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_PERU" href="#SPANISH_PERU">SPANISH_PERU</a> = <span class="php-quote">&quot;es_PE&quot;</span>;
+</span><span id="142" class="l"><a class="l" href="#142">142: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_PUERTO_RICO" href="#SPANISH_PUERTO_RICO">SPANISH_PUERTO_RICO</a> = <span class="php-quote">&quot;es_PR&quot;</span>;
+</span><span id="143" class="l"><a class="l" href="#143">143: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_UNITED_STATES" href="#SPANISH_UNITED_STATES">SPANISH_UNITED_STATES</a> = <span class="php-quote">&quot;es_US&quot;</span>;
+</span><span id="144" class="l"><a class="l" href="#144">144: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_URUGUAY" href="#SPANISH_URUGUAY">SPANISH_URUGUAY</a> = <span class="php-quote">&quot;es_UY&quot;</span>;
+</span><span id="145" class="l"><a class="l" href="#145">145: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_VENEZUELA" href="#SPANISH_VENEZUELA">SPANISH_VENEZUELA</a> = <span class="php-quote">&quot;es_VE&quot;</span>;
+</span><span id="146" class="l"><a class="l" href="#146">146: </a>    <span class="php-keyword1">const</span> <a id="SPANISH_TRADITIONAL_SORT" href="#SPANISH_TRADITIONAL_SORT">SPANISH_TRADITIONAL_SORT</a> = <span class="php-quote">&quot;es&quot;</span>;
+</span><span id="147" class="l"><a class="l" href="#147">147: </a>    <span class="php-keyword1">const</span> <a id="SUTU" href="#SUTU">SUTU</a> = <span class="php-quote">&quot;sx&quot;</span>;
+</span><span id="148" class="l"><a class="l" href="#148">148: </a>    <span class="php-keyword1">const</span> <a id="SWAHILI" href="#SWAHILI">SWAHILI</a> = <span class="php-quote">&quot;sw&quot;</span>;
+</span><span id="149" class="l"><a class="l" href="#149">149: </a>    <span class="php-keyword1">const</span> <a id="SWEDISH_FINLAND" href="#SWEDISH_FINLAND">SWEDISH_FINLAND</a> = <span class="php-quote">&quot;sv_FI&quot;</span>;
+</span><span id="150" class="l"><a class="l" href="#150">150: </a>    <span class="php-keyword1">const</span> <a id="SWEDISH" href="#SWEDISH">SWEDISH</a> = <span class="php-quote">&quot;sv&quot;</span>;
+</span><span id="151" class="l"><a class="l" href="#151">151: </a>    <span class="php-keyword1">const</span> <a id="SYRIAC" href="#SYRIAC">SYRIAC</a> = <span class="php-quote">&quot;syr&quot;</span>;
+</span><span id="152" class="l"><a class="l" href="#152">152: </a>    <span class="php-keyword1">const</span> <a id="TAMIL" href="#TAMIL">TAMIL</a> = <span class="php-quote">&quot;ta&quot;</span>;
+</span><span id="153" class="l"><a class="l" href="#153">153: </a>    <span class="php-keyword1">const</span> <a id="TATAR" href="#TATAR">TATAR</a> = <span class="php-quote">&quot;tt&quot;</span>;
+</span><span id="154" class="l"><a class="l" href="#154">154: </a>    <span class="php-keyword1">const</span> <a id="TELUGU" href="#TELUGU">TELUGU</a> = <span class="php-quote">&quot;te&quot;</span>;
+</span><span id="155" class="l"><a class="l" href="#155">155: </a>    <span class="php-keyword1">const</span> <a id="THAI" href="#THAI">THAI</a> = <span class="php-quote">&quot;th&quot;</span>;
+</span><span id="156" class="l"><a class="l" href="#156">156: </a>    <span class="php-keyword1">const</span> <a id="TSONGA" href="#TSONGA">TSONGA</a> = <span class="php-quote">&quot;ts&quot;</span>;
+</span><span id="157" class="l"><a class="l" href="#157">157: </a>    <span class="php-keyword1">const</span> <a id="TSWANA" href="#TSWANA">TSWANA</a> = <span class="php-quote">&quot;tn&quot;</span>;
+</span><span id="158" class="l"><a class="l" href="#158">158: </a>    <span class="php-keyword1">const</span> <a id="TURKISH" href="#TURKISH">TURKISH</a> = <span class="php-quote">&quot;tr&quot;</span>;
+</span><span id="159" class="l"><a class="l" href="#159">159: </a>    <span class="php-keyword1">const</span> <a id="UKRAINIAN" href="#UKRAINIAN">UKRAINIAN</a> = <span class="php-quote">&quot;uk&quot;</span>;
+</span><span id="160" class="l"><a class="l" href="#160">160: </a>    <span class="php-keyword1">const</span> <a id="URDU" href="#URDU">URDU</a> = <span class="php-quote">&quot;ur&quot;</span>;
+</span><span id="161" class="l"><a class="l" href="#161">161: </a>    <span class="php-keyword1">const</span> <a id="UZBEK" href="#UZBEK">UZBEK</a> = <span class="php-quote">&quot;uz&quot;</span>;
+</span><span id="162" class="l"><a class="l" href="#162">162: </a>    <span class="php-keyword1">const</span> <a id="VIETNAMESE" href="#VIETNAMESE">VIETNAMESE</a> = <span class="php-quote">&quot;vi&quot;</span>;
+</span><span id="163" class="l"><a class="l" href="#163">163: </a>    <span class="php-keyword1">const</span> <a id="XHOSA" href="#XHOSA">XHOSA</a> = <span class="php-quote">&quot;xh&quot;</span>;
+</span><span id="164" class="l"><a class="l" href="#164">164: </a>    <span class="php-keyword1">const</span> <a id="YIDDISH" href="#YIDDISH">YIDDISH</a> = <span class="php-quote">&quot;yi&quot;</span>;
+</span><span id="165" class="l"><a class="l" href="#165">165: </a>    <span class="php-keyword1">const</span> <a id="ZULU" href="#ZULU">ZULU</a> = <span class="php-quote">&quot;zu&quot;</span>;
+</span><span id="166" class="l"><a class="l" href="#166">166: </a>
+</span><span id="167" class="l"><a class="l" href="#167">167: </a>}
+</span><span id="168" class="l"><a class="l" href="#168">168: </a>
+</span><span id="169" class="l"><a class="l" href="#169">169: </a><span class="xlang">?&gt;</span>
+</span><span id="170" class="l"><a class="l" href="#170">170: </a></span></code></pre>
+
+	<div id="footer">
+		PEG Api API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
