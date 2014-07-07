@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Class Peg\Lib\Command\Action\Generate | PEG Api</title>
+	<title>Namespace Peg\Lib\Command\Action\Generate | PEG Api</title>
 
-	<script type="text/javascript" src="resources/combined.js?174271566"></script>
-	<script type="text/javascript" src="elementlist.js?3445220540"></script>
+	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
+	<script type="text/javascript" src="elementlist.js?1262886233"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -29,6 +29,8 @@
 						<ul>
 				<li class="active"><a href="namespace-Peg.Lib.Command.Action.html">Action<span></span></a>
 						<ul>
+				<li class="active"><a href="namespace-Peg.Lib.Command.Action.Generate.html">Generate</a>
+						</li>
 				<li><a href="namespace-Peg.Lib.Command.Action.Parse.html">Parse</a>
 						</li>
 							</ul></li></ul></li>
@@ -41,6 +43,8 @@
 				<li><a href="namespace-Peg.Lib.Definitions.Element.html">Element</a>
 						</li>
 							</ul></li>
+				<li><a href="namespace-Peg.Lib.Generator.html">Generator</a>
+						</li>
 				<li><a href="namespace-Peg.Lib.Lexers.html">Lexers</a>
 						</li>
 				<li><a href="namespace-Peg.Lib.Localization.html">Localization</a>
@@ -73,9 +77,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-Peg.Lib.Command.Action.Generate.html">Generate</a></li>
-				<li><a href="class-Peg.Lib.Command.Action.Help.html">Help</a></li>
-				<li><a href="class-Peg.Lib.Command.Action.Init.html">Init</a></li>
+				<li><a href="class-Peg.Lib.Command.Action.Generate.Base.html">Base</a></li>
+				<li><a href="class-Peg.Lib.Command.Action.Generate.ZendPHP.html">ZendPHP</a></li>
 			</ul>
 
 
@@ -102,10 +105,9 @@
 			<li>
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
-			<li>
-				<a href="namespace-Peg.Lib.Command.Action.html" title="Summary of Peg\Lib\Command\Action"><span>Namespace</span></a>
-			</li>
 			<li class="active">
+<span>Namespace</span>			</li>
+			<li>
 <span>Class</span>			</li>
 		</ul>
 		<ul>
@@ -120,98 +122,23 @@
 		</ul>
 	</div>
 
-<div id="content" class="class">
-	<h1>Class Generate</h1>
-
-
-	<div class="description">
-	
-<p>Action taken if the generate command was executed.</p>
-
-	</div>
-
-	<dl class="tree">
-		<dd style="padding-left:0px">
-			<a href="class-Peg.Lib.CommandLine.Action.html"><span>Peg\Lib\CommandLine\Action</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:30px">
-			<img src="resources/inherit.png" alt="Extended by" />
-<b><span>Peg\Lib\Command\Action\Generate</span></b>			
-			
-			
-		</dd>
-	</dl>
+<div id="content" class="namespace">
+	<h1>Namespace <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a>\<a href="namespace-Peg.Lib.Command.html">Command</a>\<a href="namespace-Peg.Lib.Command.Action.html">Action</a>\Generate</h1>
 
 
 
-
-
-
-
-
-	<div class="info">
-		
-		
-		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a>\<a href="namespace-Peg.Lib.Command.html">Command</a>\<a href="namespace-Peg.Lib.Command.Action.html">Action</a><br />
-		
-
-		<b>Located at</b> <a href="source-class-Peg.Lib.Command.Action.Generate.html#14-42" title="Go to source code">Command/Action/Generate.php</a><br />
-	</div>
-
-
-
-	<table class="summary" id="methods">
-	<caption>Methods summary</caption>
-	<tr data-order="OnCall" id="_OnCall">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_OnCall">#</a>
-		<code><a href="source-class-Peg.Lib.Command.Action.Generate.html#20-40" title="Go to source code">OnCall</a>( <span><code><a href="class-Peg.Lib.CommandLine.Command.html">Peg\Lib\CommandLine\Command</a></code> <var>$command</var></span> )</code>
-
-		<div class="description short">
-			
-<p>Method called by the command if it was executed.</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Method called by the command if it was executed.</p>
-
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<table class="summary" id="classes">
+<caption>Classes summary</caption>
+<tr>
+	<td class="name"><a href="class-Peg.Lib.Command.Action.Generate.Base.html">Base</a></td>
+	<td>Declares the base for a parse action that extract and generates definition
+files.</td>
+</tr>
+<tr>
+	<td class="name"><a href="class-Peg.Lib.Command.Action.Generate.ZendPHP.html">ZendPHP</a></td>
+	<td>Implements a zendphp engine generator action using \Peg\Lib\Generator\ZendPHP.</td>
+</tr>
+</table>
 
 
 
