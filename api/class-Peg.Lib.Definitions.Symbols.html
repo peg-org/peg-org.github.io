@@ -7,7 +7,7 @@
 	<title>Class Peg\Lib\Definitions\Symbols | PEG Api</title>
 
 	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
-	<script type="text/javascript" src="elementlist.js?1262886233"></script>
+	<script type="text/javascript" src="elementlist.js?2796630167"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -151,7 +151,7 @@ PHP extension.</p>
 		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a>\<a href="namespace-Peg.Lib.Definitions.html">Definitions</a><br />
 		
 
-		<b>Located at</b> <a href="source-class-Peg.Lib.Definitions.Symbols.html#10-695" title="Go to source code">Definitions/Symbols.php</a><br />
+		<b>Located at</b> <a href="source-class-Peg.Lib.Definitions.Symbols.html#10-1179" title="Go to source code">Definitions/Symbols.php</a><br />
 	</div>
 
 
@@ -517,6 +517,48 @@ generation.</dd>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="ClassHasProperties" id="_ClassHasProperties">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ClassHasProperties">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#159-175" title="Go to source code">ClassHasProperties</a>( <span>string <var>$class_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks if a class has properties.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks if a class has properties.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class_name</var></dt>
+					<dd><code>string</code><br>$class_name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True if has properties, otherwise false.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="GetStandardType" id="_GetStandardType">
 
 		<td class="attributes"><code>
@@ -528,7 +570,7 @@ generation.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetStandardType">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#159-224" title="Go to source code">GetStandardType</a>( <span><code><a href="class-Peg.Lib.Definitions.Element.VariableType.html">Peg\Lib\Definitions\Element\VariableType</a></code> <var>$type</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#177-247" title="Go to source code">GetStandardType</a>( <span><code><a href="class-Peg.Lib.Definitions.Element.VariableType.html">Peg\Lib\Definitions\Element\VariableType</a></code> <var>$type</var></span> )</code>
 
 		<div class="description short">
 			
@@ -552,7 +594,49 @@ generation.</dd>
 
 				<h4>Todo</h4>
 				<div class="list">
-						Finish implementing this.<br />
+						Add hook|signal so a plugin can modify the returned type.<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="GetPHPStandardType" id="_GetPHPStandardType">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_GetPHPStandardType">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#249-301" title="Go to source code">GetPHPStandardType</a>( <span><code><a href="class-Peg.Lib.Definitions.Element.VariableType.html">Peg\Lib\Definitions\Element\VariableType</a></code> <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the php standard type identifier for a variable type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the php standard type identifier for a variable type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code><code><a href="class-Peg.Lib.Definitions.Element.VariableType.html">Peg\Lib\Definitions\Element\VariableType</a></code></code><br>$type</dd>
+				</dl></div>
+
+
+
+				<h4>Todo</h4>
+				<div class="list">
+						Add hook|signal so a plugin can modify the returned type.<br />
 				</div>
 
 
@@ -570,7 +654,7 @@ generation.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetComponents">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#226-282" title="Go to source code">GetComponents</a>( <span>string <var>$type</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#303-359" title="Go to source code">GetComponents</a>( <span>string <var>$type</var></span> )</code>
 
 		<div class="description short">
 			
@@ -603,18 +687,62 @@ whole symbols object for matches.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="GetClassChilds" id="_GetClassChilds">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Peg.Lib.Definitions.Element.ClassElement.html">Peg\Lib\Definitions\Element\ClassElement</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_GetClassChilds">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#361-412" title="Go to source code">GetClassChilds</a>( <span>string <var>$class_name</var></span>, <span>mixed <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets a list of child classes that inherit from the given class.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets a list of child classes that inherit from the given class.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class_name</var></dt>
+					<dd><code>string</code><br>$class_name</dd>
+					<dt><var>$namespace</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Peg.Lib.Definitions.Element.ClassElement.html">Peg\Lib\Definitions\Element\ClassElement</a>[]</code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="HasNamespace" id="_HasNamespace">
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			<code><a href="class-Peg.Lib.Definitions.Element.NamespaceElement.html">Peg\Lib\Definitions\Element\NamespaceElement</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_HasNamespace">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#284-311" title="Go to source code">HasNamespace</a>( <span>string <var>$namespace</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#414-441" title="Go to source code">HasNamespace</a>( <span>string <var>$namespace</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -638,7 +766,7 @@ whole symbols object for matches.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					<code><code><a href="class-Peg.Lib.Definitions.Element.NamespaceElement.html">Peg\Lib\Definitions\Element\NamespaceElement</a></code></code><br>or null if nothing found.<br />
 				</div>
 
 
@@ -651,14 +779,14 @@ whole symbols object for matches.</p>
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			<code><a href="class-Peg.Lib.Definitions.Element.Constant.html">Peg\Lib\Definitions\Element\Constant</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_HasConstant">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#313-367" title="Go to source code">HasConstant</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#443-509" title="Go to source code">HasConstant</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -675,7 +803,8 @@ whole symbols object for matches.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd><code>string</code><br>$name Name of the constant.</dd>
+					<dd><code>string</code><br>$name Name of the constant can include namespace separated by the :: operator or
+\.</dd>
 					<dt><var>$header</var></dt>
 					<dd><code>string</code><br>$header A specific header to search in.</dd>
 					<dt><var>$namespace</var></dt>
@@ -684,7 +813,7 @@ whole symbols object for matches.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					<code><code><a href="class-Peg.Lib.Definitions.Element.Constant.html">Peg\Lib\Definitions\Element\Constant</a></code></code><br>or null if nothing found.<br />
 				</div>
 
 
@@ -697,14 +826,14 @@ whole symbols object for matches.</p>
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			<code><a href="class-Peg.Lib.Definitions.Element.Enumeration.html">Peg\Lib\Definitions\Element\Enumeration</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_HasEnumeration">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#369-424" title="Go to source code">HasEnumeration</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#511-577" title="Go to source code">HasEnumeration</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -721,7 +850,8 @@ whole symbols object for matches.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd><code>string</code><br>$name Name of the enumeration.</dd>
+					<dd><code>string</code><br>$name Name of the enumeration can include namespace separated by the :: operator
+or \.</dd>
 					<dt><var>$header</var></dt>
 					<dd><code>string</code><br>$header A specific header to search in.</dd>
 					<dt><var>$namespace</var></dt>
@@ -730,14 +860,10 @@ whole symbols object for matches.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					<code><code><a href="class-Peg.Lib.Definitions.Element.Enumeration.html">Peg\Lib\Definitions\Element\Enumeration</a></code></code><br>or null if nothing found.<br />
 				</div>
 
 
-				<h4>Todo</h4>
-				<div class="list">
-						Resolve namespaces that are part of the name.<br />
-				</div>
 
 
 		</div>
@@ -747,14 +873,14 @@ whole symbols object for matches.</p>
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			<code><a href="class-Peg.Lib.Definitions.Element.TypeDef.html">Peg\Lib\Definitions\Element\TypeDef</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_HasTypeDef">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#426-481" title="Go to source code">HasTypeDef</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#579-646" title="Go to source code">HasTypeDef</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -771,7 +897,8 @@ whole symbols object for matches.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd><code>string</code><br>$name Name of the typedef.</dd>
+					<dd><code>string</code><br>$name Name of the typedef can include namespace separated by the :: operator or
+\.</dd>
 					<dt><var>$header</var></dt>
 					<dd><code>string</code><br>$header A specific header to search in.</dd>
 					<dt><var>$namespace</var></dt>
@@ -780,13 +907,13 @@ whole symbols object for matches.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					<code><code><a href="class-Peg.Lib.Definitions.Element.TypeDef.html">Peg\Lib\Definitions\Element\TypeDef</a></code></code><br>or null if nothing found.<br />
 				</div>
 
 
 				<h4>Todo</h4>
 				<div class="list">
-						Resolve namespaces that are part of the name.<br />
+						Resolve classes that are part of the name.<br />
 				</div>
 
 
@@ -797,14 +924,14 @@ whole symbols object for matches.</p>
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			<code><a href="class-Peg.Lib.Definitions.Element.GlobalVariable.html">Peg\Lib\Definitions\Element\GlobalVariable</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_HasGlobalVariable">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#483-538" title="Go to source code">HasGlobalVariable</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#648-714" title="Go to source code">HasGlobalVariable</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -821,7 +948,8 @@ whole symbols object for matches.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd><code>string</code><br>$name Name of the global variable.</dd>
+					<dd><code>string</code><br>$name Name of the global variable can include namespace separated by the ::
+operator or \.</dd>
 					<dt><var>$header</var></dt>
 					<dd><code>string</code><br>$header A specific header to search in.</dd>
 					<dt><var>$namespace</var></dt>
@@ -830,14 +958,10 @@ whole symbols object for matches.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					<code><code><a href="class-Peg.Lib.Definitions.Element.GlobalVariable.html">Peg\Lib\Definitions\Element\GlobalVariable</a></code></code><br>or null if nothing found.<br />
 				</div>
 
 
-				<h4>Todo</h4>
-				<div class="list">
-						Resolve namespaces that are part of the name.<br />
-				</div>
 
 
 		</div>
@@ -847,14 +971,14 @@ whole symbols object for matches.</p>
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			<code><a href="class-Peg.Lib.Definitions.Element.FunctionElement.html">Peg\Lib\Definitions\Element\FunctionElement</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_HasFunction">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#540-595" title="Go to source code">HasFunction</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#716-782" title="Go to source code">HasFunction</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -871,7 +995,8 @@ whole symbols object for matches.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd><code>string</code><br>$name Name of the function.</dd>
+					<dd><code>string</code><br>$name Name of the function can include namespace separated by the :: operator or
+\.</dd>
 					<dt><var>$header</var></dt>
 					<dd><code>string</code><br>$header A specific header to search in.</dd>
 					<dt><var>$namespace</var></dt>
@@ -880,14 +1005,10 @@ whole symbols object for matches.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					<code><code><a href="class-Peg.Lib.Definitions.Element.FunctionElement.html">Peg\Lib\Definitions\Element\FunctionElement</a></code></code><br>or null if nothing found.<br />
 				</div>
 
 
-				<h4>Todo</h4>
-				<div class="list">
-						Resolve namespaces that are part of the name.<br />
-				</div>
 
 
 		</div>
@@ -897,14 +1018,14 @@ whole symbols object for matches.</p>
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			<code><a href="class-Peg.Lib.Definitions.Element.ClassElement.html">Peg\Lib\Definitions\Element\ClassElement</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_HasClass">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#597-652" title="Go to source code">HasClass</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#784-851" title="Go to source code">HasClass</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -921,7 +1042,7 @@ whole symbols object for matches.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$name</var></dt>
-					<dd><code>string</code><br>$name Name of the class.</dd>
+					<dd><code>string</code><br>$name Name of the class can include namespace separated by the :: operator or \.</dd>
 					<dt><var>$header</var></dt>
 					<dd><code>string</code><br>$header A specific header to search in.</dd>
 					<dt><var>$namespace</var></dt>
@@ -930,13 +1051,13 @@ whole symbols object for matches.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					<code><code><a href="class-Peg.Lib.Definitions.Element.ClassElement.html">Peg\Lib\Definitions\Element\ClassElement</a></code></code><br>or null if nothing found.<br />
 				</div>
 
 
 				<h4>Todo</h4>
 				<div class="list">
-						Resolve namespaces that are part of the name.<br />
+						Resolve classes that are part of the name.<br />
 				</div>
 
 
@@ -947,14 +1068,14 @@ whole symbols object for matches.</p>
 
 		<td class="attributes"><code>
 			 public 
-			boolean
+			<code><a href="class-Peg.Lib.Definitions.Element.Enumeration.html">Peg\Lib\Definitions\Element\Enumeration</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_HasClassEnum">#</a>
-		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#654-694" title="Go to source code">HasClassEnum</a>( <span>string <var>$type</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#853-899" title="Go to source code">HasClassEnum</a>( <span>string <var>$type</var></span> )</code>
 
 		<div class="description short">
 			
@@ -978,8 +1099,338 @@ the :: operator or \.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br />
+					<code><code><a href="class-Peg.Lib.Definitions.Element.Enumeration.html">Peg\Lib\Definitions\Element\Enumeration</a></code></code><br>or null if nothing found.<br />
 				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RemoveHeader" id="_RemoveHeader">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RemoveHeader">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#901-909" title="Go to source code">RemoveHeader</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a header from the symbols object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a header from the symbols object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RemoveNamespace" id="_RemoveNamespace">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RemoveNamespace">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#911-929" title="Go to source code">RemoveNamespace</a>( <span>string <var>$name</var></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a namespace from the symbols object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a namespace from the symbols object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header A specific header.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RemoveConstant" id="_RemoveConstant">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RemoveConstant">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#931-970" title="Go to source code">RemoveConstant</a>( <span>string <var>$name</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a constant from the symbols object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a constant from the symbols object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code><br>$namespace A specific namespace.</dd>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header A specific header.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RemoveEnumeration" id="_RemoveEnumeration">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RemoveEnumeration">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#972-1011" title="Go to source code">RemoveEnumeration</a>( <span>string <var>$name</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes an enumeration from the symbols object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes an enumeration from the symbols object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code><br>$namespace A specific namespace.</dd>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header A specific header.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RemoveTypeDef" id="_RemoveTypeDef">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RemoveTypeDef">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#1013-1052" title="Go to source code">RemoveTypeDef</a>( <span>string <var>$name</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a typedef from the symbols object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a typedef from the symbols object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code><br>$namespace A specific namespace.</dd>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header A specific header.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RemoveGlobalVariable" id="_RemoveGlobalVariable">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RemoveGlobalVariable">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#1054-1095" title="Go to source code">RemoveGlobalVariable</a>( <span>string <var>$name</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a global variable from the symbols object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a global variable from the symbols object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code><br>$namespace A specific namespace.</dd>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header A specific header.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RemoveFunction" id="_RemoveFunction">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RemoveFunction">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#1097-1136" title="Go to source code">RemoveFunction</a>( <span>string <var>$name</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a function from the symbols object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a function from the symbols object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code><br>$namespace A specific namespace.</dd>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header A specific header.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RemoveClass" id="_RemoveClass">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RemoveClass">#</a>
+		<code><a href="source-class-Peg.Lib.Definitions.Symbols.html#1138-1177" title="Go to source code">RemoveClass</a>( <span>string <var>$name</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$header</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a class from the symbols object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a class from the symbols object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code><br>$namespace A specific namespace.</dd>
+					<dt><var>$header</var></dt>
+					<dd><code>string</code><br>$header A specific header.</dd>
+				</dl></div>
+
 
 
 

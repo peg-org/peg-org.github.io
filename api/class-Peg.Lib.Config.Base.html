@@ -7,7 +7,7 @@
 	<title>Class Peg\Lib\Config\Base | PEG Api</title>
 
 	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
-	<script type="text/javascript" src="elementlist.js?1262886233"></script>
+	<script type="text/javascript" src="elementlist.js?2796630167"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -79,6 +79,7 @@
 			<ul>
 				<li class="active"><a href="class-Peg.Lib.Config.Base.html">Base</a></li>
 				<li><a href="class-Peg.Lib.Config.INI.html">INI</a></li>
+				<li><a href="class-Peg.Lib.Config.JSON.html">JSON</a></li>
 			</ul>
 
 
@@ -138,7 +139,8 @@ should implement this class.</p>
 
 	<div>
 		<h4>Direct known subclasses</h4>
-			<a href="class-Peg.Lib.Config.INI.html">Peg\Lib\Config\INI</a>
+			<a href="class-Peg.Lib.Config.INI.html">Peg\Lib\Config\INI</a>, 
+			<a href="class-Peg.Lib.Config.JSON.html">Peg\Lib\Config\JSON</a>
 	</div>
 
 
@@ -152,7 +154,7 @@ should implement this class.</p>
 		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a>\<a href="namespace-Peg.Lib.Config.html">Config</a><br />
 		
 
-		<b>Located at</b> <a href="source-class-Peg.Lib.Config.Base.html#10-86" title="Go to source code">Config/Base.php</a><br />
+		<b>Located at</b> <a href="source-class-Peg.Lib.Config.Base.html#10-127" title="Go to source code">Config/Base.php</a><br />
 	</div>
 
 
@@ -170,7 +172,7 @@ should implement this class.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_Load">#</a>
-		<code><a href="source-class-Peg.Lib.Config.Base.html#35-41" title="Go to source code">Load</a>( <span>string <var>$directory</var></span>, <span>string <var>$configuration_file</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Config.Base.html#44-50" title="Go to source code">Load</a>( <span>string <var>$directory</var></span>, <span>string <var>$configuration_file</var></span> )</code>
 
 		<div class="description short">
 			
@@ -201,10 +203,43 @@ exists.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="Get" id="_Get">
+	<tr data-order="Write" id="_Write">
 
 		<td class="attributes"><code>
 			abstract public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_Write">#</a>
+		<code><a href="source-class-Peg.Lib.Config.Base.html#52-55" title="Go to source code">Write</a>( )</code>
+
+		<div class="description short">
+			
+<p>Writes a configuration file using the settings array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Writes a configuration file using the settings array.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="Get" id="_Get">
+
+		<td class="attributes"><code>
+			 public 
 			boolean
 			
 			</code>
@@ -212,24 +247,24 @@ exists.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_Get">#</a>
-		<code><a href="source-class-Peg.Lib.Config.Base.html#43-48" title="Go to source code">Get</a>( <span>string <var>$valueName</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Config.Base.html#57-70" title="Go to source code">Get</a>( <span>string <var>$option</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Get a setting value.</p>
+<p>Get an option value.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Get a setting value.</p>
+<p>Get an option value.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$valueName</var></dt>
-					<dd><code>string</code><br>$valueName</dd>
+					<dt><var>$option</var></dt>
+					<dd><code>string</code><br>$option</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -246,7 +281,7 @@ exists.</p>
 	<tr data-order="GetAll" id="_GetAll">
 
 		<td class="attributes"><code>
-			abstract public 
+			 public 
 			array
 			
 			</code>
@@ -254,17 +289,17 @@ exists.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetAll">#</a>
-		<code><a href="source-class-Peg.Lib.Config.Base.html#50-54" title="Go to source code">GetAll</a>( )</code>
+		<code><a href="source-class-Peg.Lib.Config.Base.html#72-79" title="Go to source code">GetAll</a>( )</code>
 
 		<div class="description short">
 			
-<p>Get all settings.</p>
+<p>Get all preferences.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Get all settings.</p>
+<p>Get all preferences.</p>
 
 
 
@@ -280,37 +315,37 @@ exists.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="GetSectionValue" id="_GetSectionValue">
+	<tr data-order="GetGroupValue" id="_GetGroupValue">
 
 		<td class="attributes"><code>
-			abstract public 
+			 public 
 			boolean|string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_GetSectionValue">#</a>
-		<code><a href="source-class-Peg.Lib.Config.Base.html#56-62" title="Go to source code">GetSectionValue</a>( <span>string <var>$sectionName</var></span>, <span>string <var>$valueName</var></span> )</code>
+		<a class="anchor" href="#_GetGroupValue">#</a>
+		<code><a href="source-class-Peg.Lib.Config.Base.html#81-98" title="Go to source code">GetGroupValue</a>( <span>string <var>$group</var></span>, <span>string <var>$option</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Get the value of a setting on a specific configuration section.</p>
+<p>Get the value of an option on a specific configuration group.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Get the value of a setting on a specific configuration section.</p>
+<p>Get the value of an option on a specific configuration group.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$sectionName</var></dt>
-					<dd><code>string</code><br>$sectionName</dd>
-					<dt><var>$valueName</var></dt>
-					<dd><code>string</code><br>$valueName</dd>
+					<dt><var>$group</var></dt>
+					<dd><code>string</code><br>$group</dd>
+					<dt><var>$option</var></dt>
+					<dd><code>string</code><br>$option</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -327,7 +362,7 @@ exists.</p>
 	<tr data-order="Set" id="_Set">
 
 		<td class="attributes"><code>
-			abstract public 
+			 public 
 			
 			
 			</code>
@@ -335,26 +370,26 @@ exists.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_Set">#</a>
-		<code><a href="source-class-Peg.Lib.Config.Base.html#64-70" title="Go to source code">Set</a>( <span>type <var>$valueName</var></span>, <span>type <var>$value</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Config.Base.html#100-111" title="Go to source code">Set</a>( <span>type <var>$option</var></span>, <span>type <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Modifies or adds a global value and writes it to the configuration file
+<p>Modifies or adds an option value and writes it to the configuration file
 immediately.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Modifies or adds a global value and writes it to the configuration file
+<p>Modifies or adds an option value and writes it to the configuration file
 immediately.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$valueName</var></dt>
-					<dd><code>type</code><br>$valueName</dd>
+					<dt><var>$option</var></dt>
+					<dd><code>type</code><br>$option</dd>
 					<dt><var>$value</var></dt>
 					<dd><code>type</code><br>$value</dd>
 				</dl></div>
@@ -366,75 +401,42 @@ immediately.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="SetSectionValue" id="_SetSectionValue">
+	<tr data-order="SetGroupValue" id="_SetGroupValue">
 
 		<td class="attributes"><code>
-			abstract public 
+			 public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_SetSectionValue">#</a>
-		<code><a href="source-class-Peg.Lib.Config.Base.html#72-79" title="Go to source code">SetSectionValue</a>( <span>string <var>$sectionName</var></span>, <span>string <var>$valueName</var></span>, <span>string <var>$value</var></span> )</code>
+		<a class="anchor" href="#_SetGroupValue">#</a>
+		<code><a href="source-class-Peg.Lib.Config.Base.html#113-125" title="Go to source code">SetGroupValue</a>( <span>string <var>$group</var></span>, <span>string <var>$option</var></span>, <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Edits or creates a new section and value and writes it to the configuration
+<p>Edits or creates a new group and option and writes it to the configuration
 file immediately.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Edits or creates a new section and value and writes it to the configuration
+<p>Edits or creates a new group and option and writes it to the configuration
 file immediately.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$sectionName</var></dt>
-					<dd><code>string</code><br>$sectionName</dd>
-					<dt><var>$valueName</var></dt>
-					<dd><code>string</code><br>$valueName</dd>
+					<dt><var>$group</var></dt>
+					<dd><code>string</code><br>$group</dd>
+					<dt><var>$option</var></dt>
+					<dd><code>string</code><br>$option</dd>
 					<dt><var>$value</var></dt>
 					<dd><code>string</code><br>$value</dd>
 				</dl></div>
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="Write" id="_Write">
-
-		<td class="attributes"><code>
-			abstract public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_Write">#</a>
-		<code><a href="source-class-Peg.Lib.Config.Base.html#81-84" title="Go to source code">Write</a>( )</code>
-
-		<div class="description short">
-			
-<p>Writes a configuration file using the settings array.</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Writes a configuration file using the settings array.</p>
-
-
-
 
 
 
@@ -458,28 +460,33 @@ file immediately.</p>
 
 	<table class="summary" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="settings" id="$settings">
+	<tr data-order="preferences" id="$preferences">
 		<td class="attributes"><code>
 			protected  
 			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peg.Lib.Config.Base.html#17-21" title="Go to source code"><var>$settings</var></a>
+				<a href="source-class-Peg.Lib.Config.Base.html#17-30" title="Go to source code"><var>$preferences</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
-			<a href="#$settings" class="anchor">#</a>
+			<a href="#$preferences" class="anchor">#</a>
 
 			<div class="description short">
 				
-<p>All settings stored on a configuration file.</p>
+<p>All preferences stored on a configuration file.</p>
 
 			</div>
 
 			<div class="description detailed hidden">
 				
-<p>All settings stored on a configuration file.</p>
+<p>All preferences stored on a configuration file.</p>
+
+<p>Format of this array for single options: $settings["option"] = "value"</p>
+
+<p>Format of this array for a group of options: $settings["group"] = array(
+"option" =&gt; "value", "option2" =&gt; "value2" )</p>
 
 
 			</div>
@@ -492,7 +499,7 @@ file immediately.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peg.Lib.Config.Base.html#23-27" title="Go to source code"><var>$directory</var></a>
+				<a href="source-class-Peg.Lib.Config.Base.html#32-36" title="Go to source code"><var>$directory</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -519,7 +526,7 @@ file immediately.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Peg.Lib.Config.Base.html#29-33" title="Go to source code"><var>$file</var></a>
+				<a href="source-class-Peg.Lib.Config.Base.html#38-42" title="Go to source code"><var>$file</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>

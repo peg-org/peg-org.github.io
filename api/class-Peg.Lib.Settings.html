@@ -7,7 +7,7 @@
 	<title>Class Peg\Lib\Settings | PEG Api</title>
 
 	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
-	<script type="text/javascript" src="elementlist.js?1262886233"></script>
+	<script type="text/javascript" src="elementlist.js?2796630167"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -148,7 +148,7 @@ directory.</p>
 		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a><br />
 		
 
-		<b>Located at</b> <a href="source-class-Peg.Lib.Settings.html#10-224" title="Go to source code">Settings.php</a><br />
+		<b>Located at</b> <a href="source-class-Peg.Lib.Settings.html#10-225" title="Go to source code">Settings.php</a><br />
 	</div>
 
 
@@ -206,17 +206,17 @@ and storage of settings.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_Load">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#36-45" title="Go to source code">Load</a>( <span>string <var>$directory</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#36-46" title="Go to source code">Load</a>( <span>string <var>$directory</var></span>, <span>string <var>$file</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Loads the peg.conf file on the given directory.</p>
+<p>Loads the configuration file on the given directory.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Loads the peg.conf file on the given directory.</p>
+<p>Loads the configuration file on the given directory.</p>
 
 
 
@@ -224,6 +224,8 @@ and storage of settings.</p>
 				<div class="list"><dl>
 					<dt><var>$directory</var></dt>
 					<dd><code>string</code><br>$directory</dd>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>$file</dd>
 				</dl></div>
 
 
@@ -244,7 +246,7 @@ and storage of settings.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_Get">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#47-57" title="Go to source code">Get</a>( <span>string <var>$option</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#48-58" title="Go to source code">Get</a>( <span>string <var>$option</var></span> )</code>
 
 		<div class="description short">
 			
@@ -275,7 +277,7 @@ and storage of settings.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="GetSectionValue" id="_GetSectionValue">
+	<tr data-order="GetGroupValue" id="_GetGroupValue">
 
 		<td class="attributes"><code>
 			 public static
@@ -285,25 +287,25 @@ and storage of settings.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_GetSectionValue">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#59-70" title="Go to source code">GetSectionValue</a>( <span>string <var>$section</var></span>, <span>string <var>$option</var></span> )</code>
+		<a class="anchor" href="#_GetGroupValue">#</a>
+		<code><a href="source-class-Peg.Lib.Settings.html#60-71" title="Go to source code">GetGroupValue</a>( <span>string <var>$group</var></span>, <span>string <var>$option</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Gets the value of a specific option inside a section.</p>
+<p>Gets the value of a specific option inside a group.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Gets the value of a specific option inside a section.</p>
+<p>Gets the value of a specific option inside a group.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$section</var></dt>
-					<dd><code>string</code><br>$section Eg: parser</dd>
+					<dt><var>$group</var></dt>
+					<dd><code>string</code><br>$group Eg: parser</dd>
 					<dt><var>$option</var></dt>
 					<dd><code>string</code><br>$option Eg: input_format</dd>
 				</dl></div>
@@ -330,7 +332,7 @@ and storage of settings.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetAuthors">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#72-81" title="Go to source code">GetAuthors</a>( )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#73-82" title="Go to source code">GetAuthors</a>( )</code>
 
 		<div class="description short">
 			
@@ -367,7 +369,7 @@ and storage of settings.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetContributors">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#83-92" title="Go to source code">GetContributors</a>( )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#84-93" title="Go to source code">GetContributors</a>( )</code>
 
 		<div class="description short">
 			
@@ -404,7 +406,7 @@ and storage of settings.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetExtensionName">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#94-115" title="Go to source code">GetExtensionName</a>( )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#95-116" title="Go to source code">GetExtensionName</a>( )</code>
 
 		<div class="description short">
 			
@@ -441,7 +443,7 @@ and storage of settings.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetVersion">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#117-126" title="Go to source code">GetVersion</a>( )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#118-127" title="Go to source code">GetVersion</a>( )</code>
 
 		<div class="description short">
 			
@@ -478,7 +480,7 @@ and storage of settings.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_Set">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#128-138" title="Go to source code">Set</a>( <span>string <var>$option</var></span>, <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#129-139" title="Go to source code">Set</a>( <span>string <var>$option</var></span>, <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -497,7 +499,7 @@ and storage of settings.</p>
 					<dt><var>$option</var></dt>
 					<dd><code>string</code><br>$option Option to add or modify.</dd>
 					<dt><var>$value</var></dt>
-					<dd><code>string</code><br>$value New value of the option.</dd>
+					<dd><code>string</code><br>$value Value of the option.</dd>
 				</dl></div>
 
 
@@ -507,7 +509,7 @@ and storage of settings.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="SetSectionValue" id="_SetSectionValue">
+	<tr data-order="SetGroupValue" id="_SetGroupValue">
 
 		<td class="attributes"><code>
 			 public static
@@ -517,29 +519,29 @@ and storage of settings.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_SetSectionValue">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#140-151" title="Go to source code">SetSectionValue</a>( <span>string <var>$section</var></span>, <span>string <var>$option</var></span>, <span>string <var>$value</var></span> )</code>
+		<a class="anchor" href="#_SetGroupValue">#</a>
+		<code><a href="source-class-Peg.Lib.Settings.html#141-152" title="Go to source code">SetGroupValue</a>( <span>string <var>$group</var></span>, <span>string <var>$option</var></span>, <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Modify or add a new section with an option.</p>
+<p>Modify or add a new group with an option.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Modify or add a new section with an option.</p>
+<p>Modify or add a new group with an option.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$section</var></dt>
-					<dd><code>string</code><br>$section Name of section to modify or create.</dd>
+					<dt><var>$group</var></dt>
+					<dd><code>string</code><br>$group Name of group to modify or create.</dd>
 					<dt><var>$option</var></dt>
-					<dd><code>string</code><br>$option Name of option to add or modify in the section.</dd>
+					<dd><code>string</code><br>$option Name of option to add or modify in the group.</dd>
 					<dt><var>$value</var></dt>
-					<dd><code>string</code><br>$value New value of the option.</dd>
+					<dd><code>string</code><br>$value Value of the option.</dd>
 				</dl></div>
 
 
@@ -560,7 +562,7 @@ and storage of settings.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_SetAuthors">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#153-166" title="Go to source code">SetAuthors</a>( <span>string <var>$authors</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#154-167" title="Go to source code">SetAuthors</a>( <span>string <var>$authors</var></span> )</code>
 
 		<div class="description short">
 			
@@ -600,7 +602,7 @@ the names of the authors.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_SetContributors">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#168-181" title="Go to source code">SetContributors</a>( <span>string <var>$contributors</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#169-182" title="Go to source code">SetContributors</a>( <span>string <var>$contributors</var></span> )</code>
 
 		<div class="description short">
 			
@@ -640,7 +642,7 @@ with the names of the contributors.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_SetExtensionName">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#183-195" title="Go to source code">SetExtensionName</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#184-196" title="Go to source code">SetExtensionName</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -680,7 +682,7 @@ generator.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_SetVersion">#</a>
-		<code><a href="source-class-Peg.Lib.Settings.html#197-209" title="Go to source code">SetVersion</a>( <span>string <var>$number</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Settings.html#198-210" title="Go to source code">SetVersion</a>( <span>string <var>$number</var></span> )</code>
 
 		<div class="description short">
 			

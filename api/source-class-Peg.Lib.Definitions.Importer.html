@@ -8,7 +8,7 @@
 	<title>File Definitions/Importer.php | PEG Api</title>
 
 	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
-	<script type="text/javascript" src="elementlist.js?1262886233"></script>
+	<script type="text/javascript" src="elementlist.js?2796630167"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -515,10 +515,10 @@
 </span><span id="385" class="l"><a class="l" href="#385">385: </a>                                    <span class="php-var">$parameter</span>[<span class="php-quote">&quot;description&quot;</span>]
 </span><span id="386" class="l"><a class="l" href="#386">386: </a>                                );
 </span><span id="387" class="l"><a class="l" href="#387">387: </a>                                
-</span><span id="388" class="l"><a class="l" href="#388">388: </a>                                <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$parameter</span>[<span class="php-quote">&quot;is_array&quot;</span>]))
-</span><span id="389" class="l"><a class="l" href="#389">389: </a>                                {
-</span><span id="390" class="l"><a class="l" href="#390">390: </a>                                    <span class="php-var">$param</span>-&gt;<span class="php-keyword2">is_array</span> = <span class="php-keyword1">true</span>;
-</span><span id="391" class="l"><a class="l" href="#391">391: </a>                                }
+</span><span id="388" class="l"><a class="l" href="#388">388: </a>                                <span class="php-keyword1">if</span>(!<span class="php-keyword1">isset</span>(<span class="php-var">$parameter</span>[<span class="php-quote">&quot;is_array&quot;</span>]))
+</span><span id="389" class="l"><a class="l" href="#389">389: </a>                                    <span class="php-var">$param</span>-&gt;<span class="php-keyword2">is_array</span> = <span class="php-keyword1">false</span>;
+</span><span id="390" class="l"><a class="l" href="#390">390: </a>                                <span class="php-keyword1">else</span>
+</span><span id="391" class="l"><a class="l" href="#391">391: </a>                                    <span class="php-var">$param</span>-&gt;<span class="php-keyword2">is_array</span> = <span class="php-var">$parameter</span>[<span class="php-quote">&quot;is_array&quot;</span>];
 </span><span id="392" class="l"><a class="l" href="#392">392: </a>                                
 </span><span id="393" class="l"><a class="l" href="#393">393: </a>                                <span class="php-var">$overload</span>-&gt;AddParameter(<span class="php-var">$param</span>);
 </span><span id="394" class="l"><a class="l" href="#394">394: </a>                            }
@@ -611,148 +611,149 @@
 </span><span id="481" class="l"><a class="l" href="#481">481: </a>                    
 </span><span id="482" class="l"><a class="l" href="#482">482: </a>                    <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$methods</span>[<span class="php-quote">&quot;_platforms&quot;</span>]))
 </span><span id="483" class="l"><a class="l" href="#483">483: </a>                    {
-</span><span id="484" class="l"><a class="l" href="#484">484: </a>                        <span class="php-keyword1">unset</span>(<span class="php-var">$methods</span>[<span class="php-quote">&quot;_platforms&quot;</span>]);
-</span><span id="485" class="l"><a class="l" href="#485">485: </a>                    }
-</span><span id="486" class="l"><a class="l" href="#486">486: </a>                    
-</span><span id="487" class="l"><a class="l" href="#487">487: </a>                    <span class="php-comment">// Add methods</span>
-</span><span id="488" class="l"><a class="l" href="#488">488: </a>                    <span class="php-keyword1">foreach</span>(<span class="php-var">$methods</span> <span class="php-keyword1">as</span> <span class="php-var">$method_name</span> =&gt; <span class="php-var">$method_overloads</span>)
-</span><span id="489" class="l"><a class="l" href="#489">489: </a>                    {
-</span><span id="490" class="l"><a class="l" href="#490">490: </a>                        <span class="php-var">$method</span> = <span class="php-keyword1">new</span> Element\FunctionElement(<span class="php-var">$method_name</span>);
-</span><span id="491" class="l"><a class="l" href="#491">491: </a>                        
-</span><span id="492" class="l"><a class="l" href="#492">492: </a>                        <span class="php-keyword1">foreach</span>(<span class="php-var">$method_overloads</span> <span class="php-keyword1">as</span> <span class="php-var">$method_overload</span>)
-</span><span id="493" class="l"><a class="l" href="#493">493: </a>                        {
-</span><span id="494" class="l"><a class="l" href="#494">494: </a>                            <span class="php-var">$overload</span> = <span class="php-keyword1">new</span> Element\<span class="php-keyword2">Overload</span>(
-</span><span id="495" class="l"><a class="l" href="#495">495: </a>                                <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;description&quot;</span>]
-</span><span id="496" class="l"><a class="l" href="#496">496: </a>                            );
-</span><span id="497" class="l"><a class="l" href="#497">497: </a>
-</span><span id="498" class="l"><a class="l" href="#498">498: </a>                            <span class="php-var">$overload</span>-&gt;SetReturnType(
-</span><span id="499" class="l"><a class="l" href="#499">499: </a>                                <span class="php-keyword1">new</span> Element\ReturnType(
-</span><span id="500" class="l"><a class="l" href="#500">500: </a>                                    <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;return_type&quot;</span>]
-</span><span id="501" class="l"><a class="l" href="#501">501: </a>                                )
-</span><span id="502" class="l"><a class="l" href="#502">502: </a>                            );
-</span><span id="503" class="l"><a class="l" href="#503">503: </a>                            
-</span><span id="504" class="l"><a class="l" href="#504">504: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;constant&quot;</span>]))
-</span><span id="505" class="l"><a class="l" href="#505">505: </a>                                <span class="php-var">$overload</span>-&gt;<span class="php-keyword2">constant</span> = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;constant&quot;</span>];
-</span><span id="506" class="l"><a class="l" href="#506">506: </a>
-</span><span id="507" class="l"><a class="l" href="#507">507: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;static&quot;</span>]))
-</span><span id="508" class="l"><a class="l" href="#508">508: </a>                                <span class="php-var">$overload</span>-&gt;<span class="php-keyword1">static</span> = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;static&quot;</span>];
-</span><span id="509" class="l"><a class="l" href="#509">509: </a>
-</span><span id="510" class="l"><a class="l" href="#510">510: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;virtual&quot;</span>]))
-</span><span id="511" class="l"><a class="l" href="#511">511: </a>                                <span class="php-var">$overload</span>-&gt;<span class="php-keyword2">virtual</span> = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;virtual&quot;</span>];
-</span><span id="512" class="l"><a class="l" href="#512">512: </a>
-</span><span id="513" class="l"><a class="l" href="#513">513: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;pure_virtual&quot;</span>]))
-</span><span id="514" class="l"><a class="l" href="#514">514: </a>                                <span class="php-var">$overload</span>-&gt;pure_virtual = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;pure_virtual&quot;</span>];
-</span><span id="515" class="l"><a class="l" href="#515">515: </a>
-</span><span id="516" class="l"><a class="l" href="#516">516: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;protected&quot;</span>]))
-</span><span id="517" class="l"><a class="l" href="#517">517: </a>                                <span class="php-var">$overload</span>-&gt;<span class="php-keyword1">protected</span> = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;protected&quot;</span>];
-</span><span id="518" class="l"><a class="l" href="#518">518: </a>
-</span><span id="519" class="l"><a class="l" href="#519">519: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;parameters&quot;</span>]))
-</span><span id="520" class="l"><a class="l" href="#520">520: </a>                            {
-</span><span id="521" class="l"><a class="l" href="#521">521: </a>                                <span class="php-keyword1">foreach</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;parameters&quot;</span>] <span class="php-keyword1">as</span> <span class="php-var">$parameter</span>)
-</span><span id="522" class="l"><a class="l" href="#522">522: </a>                                {
-</span><span id="523" class="l"><a class="l" href="#523">523: </a>                                    <span class="php-keyword1">if</span>(!<span class="php-keyword1">isset</span>(<span class="php-var">$parameter</span>[<span class="php-quote">&quot;value&quot;</span>]))
-</span><span id="524" class="l"><a class="l" href="#524">524: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;value&quot;</span>] = <span class="php-quote">&quot;&quot;</span>;
-</span><span id="525" class="l"><a class="l" href="#525">525: </a>                                    
-</span><span id="526" class="l"><a class="l" href="#526">526: </a>                                    <span class="php-keyword1">if</span>(!<span class="php-keyword1">isset</span>(<span class="php-var">$parameter</span>[<span class="php-quote">&quot;description&quot;</span>]))
-</span><span id="527" class="l"><a class="l" href="#527">527: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;description&quot;</span>] = <span class="php-quote">&quot;&quot;</span>;
-</span><span id="528" class="l"><a class="l" href="#528">528: </a>
-</span><span id="529" class="l"><a class="l" href="#529">529: </a>                                    <span class="php-var">$param</span> = <span class="php-keyword1">new</span> Element\Parameter(
-</span><span id="530" class="l"><a class="l" href="#530">530: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;name&quot;</span>], 
-</span><span id="531" class="l"><a class="l" href="#531">531: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;type&quot;</span>], 
-</span><span id="532" class="l"><a class="l" href="#532">532: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;value&quot;</span>],
-</span><span id="533" class="l"><a class="l" href="#533">533: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;description&quot;</span>]
-</span><span id="534" class="l"><a class="l" href="#534">534: </a>                                    );
-</span><span id="535" class="l"><a class="l" href="#535">535: </a>
-</span><span id="536" class="l"><a class="l" href="#536">536: </a>                                    <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$parameter</span>[<span class="php-quote">&quot;is_array&quot;</span>]))
-</span><span id="537" class="l"><a class="l" href="#537">537: </a>                                    {
-</span><span id="538" class="l"><a class="l" href="#538">538: </a>                                        <span class="php-var">$param</span>-&gt;<span class="php-keyword2">is_array</span> = <span class="php-keyword1">true</span>;
-</span><span id="539" class="l"><a class="l" href="#539">539: </a>                                    }
-</span><span id="540" class="l"><a class="l" href="#540">540: </a>
-</span><span id="541" class="l"><a class="l" href="#541">541: </a>                                    <span class="php-var">$overload</span>-&gt;AddParameter(<span class="php-var">$param</span>);
-</span><span id="542" class="l"><a class="l" href="#542">542: </a>                                }
-</span><span id="543" class="l"><a class="l" href="#543">543: </a>                            }
-</span><span id="544" class="l"><a class="l" href="#544">544: </a>
-</span><span id="545" class="l"><a class="l" href="#545">545: </a>                            <span class="php-var">$method</span>-&gt;AddOverload(<span class="php-var">$overload</span>);
-</span><span id="546" class="l"><a class="l" href="#546">546: </a>                        }
-</span><span id="547" class="l"><a class="l" href="#547">547: </a>                        
-</span><span id="548" class="l"><a class="l" href="#548">548: </a>                        <span class="php-var">$class</span>-&gt;AddMethod(<span class="php-var">$method</span>);
-</span><span id="549" class="l"><a class="l" href="#549">549: </a>                    }
-</span><span id="550" class="l"><a class="l" href="#550">550: </a>                    
-</span><span id="551" class="l"><a class="l" href="#551">551: </a>                    <span class="php-comment">// Add enumerations</span>
-</span><span id="552" class="l"><a class="l" href="#552">552: </a>                    <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$enumerations_def</span>[<span class="php-var">$header</span>][<span class="php-var">$namespace</span>][<span class="php-var">$class_name</span>]))
-</span><span id="553" class="l"><a class="l" href="#553">553: </a>                    {
-</span><span id="554" class="l"><a class="l" href="#554">554: </a>                        <span class="php-keyword1">foreach</span>(<span class="php-var">$enumerations_def</span>[<span class="php-var">$header</span>][<span class="php-var">$namespace</span>][<span class="php-var">$class_name</span>] <span class="php-keyword1">as</span> <span class="php-var">$enumeration_name</span>=&gt;<span class="php-var">$enumeration_data</span>)
-</span><span id="555" class="l"><a class="l" href="#555">555: </a>                        {
-</span><span id="556" class="l"><a class="l" href="#556">556: </a>                            <span class="php-keyword1">if</span>(!<span class="php-keyword1">isset</span>(<span class="php-var">$enumeration_data</span>[<span class="php-quote">&quot;description&quot;</span>]))
-</span><span id="557" class="l"><a class="l" href="#557">557: </a>                                <span class="php-var">$enumeration_data</span>[<span class="php-quote">&quot;description&quot;</span>] = <span class="php-quote">&quot;&quot;</span>;
-</span><span id="558" class="l"><a class="l" href="#558">558: </a>                            
-</span><span id="559" class="l"><a class="l" href="#559">559: </a>                            <span class="php-var">$class</span>-&gt;AddEnumeration(
-</span><span id="560" class="l"><a class="l" href="#560">560: </a>                                <span class="php-keyword1">new</span> Element\Enumeration(
-</span><span id="561" class="l"><a class="l" href="#561">561: </a>                                    <span class="php-var">$enumeration_name</span>,
-</span><span id="562" class="l"><a class="l" href="#562">562: </a>                                    <span class="php-var">$enumeration_data</span>[<span class="php-quote">&quot;options&quot;</span>],
-</span><span id="563" class="l"><a class="l" href="#563">563: </a>                                    <span class="php-var">$enumeration_data</span>[<span class="php-quote">&quot;description&quot;</span>]
-</span><span id="564" class="l"><a class="l" href="#564">564: </a>                                )
-</span><span id="565" class="l"><a class="l" href="#565">565: </a>                            );
-</span><span id="566" class="l"><a class="l" href="#566">566: </a>                        }
-</span><span id="567" class="l"><a class="l" href="#567">567: </a>                    }
-</span><span id="568" class="l"><a class="l" href="#568">568: </a>                    
-</span><span id="569" class="l"><a class="l" href="#569">569: </a>                    <span class="php-comment">// Add variables</span>
-</span><span id="570" class="l"><a class="l" href="#570">570: </a>                    <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variables_def</span>[<span class="php-var">$header</span>][<span class="php-var">$namespace</span>][<span class="php-var">$class_name</span>]))
-</span><span id="571" class="l"><a class="l" href="#571">571: </a>                    {
-</span><span id="572" class="l"><a class="l" href="#572">572: </a>                        <span class="php-keyword1">foreach</span>(<span class="php-var">$variables_def</span>[<span class="php-var">$header</span>][<span class="php-var">$namespace</span>][<span class="php-var">$class_name</span>] <span class="php-keyword1">as</span> <span class="php-var">$variable_name</span>=&gt;<span class="php-var">$variable_options</span>)
-</span><span id="573" class="l"><a class="l" href="#573">573: </a>                        {
-</span><span id="574" class="l"><a class="l" href="#574">574: </a>                            <span class="php-var">$variable</span> = <span class="php-keyword1">new</span> Element\ClassVariable(
-</span><span id="575" class="l"><a class="l" href="#575">575: </a>                                <span class="php-var">$variable_name</span>, 
-</span><span id="576" class="l"><a class="l" href="#576">576: </a>                                <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;type&quot;</span>]
-</span><span id="577" class="l"><a class="l" href="#577">577: </a>                            );
-</span><span id="578" class="l"><a class="l" href="#578">578: </a>                            
-</span><span id="579" class="l"><a class="l" href="#579">579: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;static&quot;</span>]))
-</span><span id="580" class="l"><a class="l" href="#580">580: </a>                                <span class="php-var">$variable</span>-&gt;<span class="php-keyword1">static</span> = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;static&quot;</span>];
-</span><span id="581" class="l"><a class="l" href="#581">581: </a>
-</span><span id="582" class="l"><a class="l" href="#582">582: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;mutable&quot;</span>]))
-</span><span id="583" class="l"><a class="l" href="#583">583: </a>                                <span class="php-var">$variable</span>-&gt;mutable = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;mutable&quot;</span>];
-</span><span id="584" class="l"><a class="l" href="#584">584: </a>
-</span><span id="585" class="l"><a class="l" href="#585">585: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;protected&quot;</span>]))
-</span><span id="586" class="l"><a class="l" href="#586">586: </a>                                <span class="php-var">$variable</span>-&gt;<span class="php-keyword1">protected</span> = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;protected&quot;</span>];
-</span><span id="587" class="l"><a class="l" href="#587">587: </a>
-</span><span id="588" class="l"><a class="l" href="#588">588: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;public&quot;</span>]))
-</span><span id="589" class="l"><a class="l" href="#589">589: </a>                                <span class="php-var">$variable</span>-&gt;<span class="php-keyword1">public</span> = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;public&quot;</span>];
-</span><span id="590" class="l"><a class="l" href="#590">590: </a>                            
-</span><span id="591" class="l"><a class="l" href="#591">591: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;description&quot;</span>]))
-</span><span id="592" class="l"><a class="l" href="#592">592: </a>                                <span class="php-var">$variable</span>-&gt;description = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;description&quot;</span>];
-</span><span id="593" class="l"><a class="l" href="#593">593: </a>                            
-</span><span id="594" class="l"><a class="l" href="#594">594: </a>                            <span class="php-var">$class</span>-&gt;AddVariable(<span class="php-var">$variable</span>);
-</span><span id="595" class="l"><a class="l" href="#595">595: </a>                        }
-</span><span id="596" class="l"><a class="l" href="#596">596: </a>                    }
-</span><span id="597" class="l"><a class="l" href="#597">597: </a>                    
-</span><span id="598" class="l"><a class="l" href="#598">598: </a>                    <span class="php-var">$this</span>-&gt;symbols-&gt;headers[<span class="php-var">$header</span>]-&gt;AddClass(
-</span><span id="599" class="l"><a class="l" href="#599">599: </a>                        <span class="php-var">$class</span>,
-</span><span id="600" class="l"><a class="l" href="#600">600: </a>                        <span class="php-var">$namespace</span>
-</span><span id="601" class="l"><a class="l" href="#601">601: </a>                    );
-</span><span id="602" class="l"><a class="l" href="#602">602: </a>                }
-</span><span id="603" class="l"><a class="l" href="#603">603: </a>            }
-</span><span id="604" class="l"><a class="l" href="#604">604: </a>        }
-</span><span id="605" class="l"><a class="l" href="#605">605: </a>
-</span><span id="606" class="l"><a class="l" href="#606">606: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$classes_def</span>);
-</span><span id="607" class="l"><a class="l" href="#607">607: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$enumerations_def</span>);
-</span><span id="608" class="l"><a class="l" href="#608">608: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$variables_def</span>);
-</span><span id="609" class="l"><a class="l" href="#609">609: </a>    }
-</span><span id="610" class="l"><a class="l" href="#610">610: </a>    
-</span><span id="611" class="l"><a class="l" href="#611">611: </a>    <span class="php-comment">/**
-</span></span><span id="612" class="l"><a class="l" href="#612">612: </a><span class="php-comment">     * Sends a signal with message of current task being performed.
-</span></span><span id="613" class="l"><a class="l" href="#613">613: </a><span class="php-comment">     * @param string $message
-</span></span><span id="614" class="l"><a class="l" href="#614">614: </a><span class="php-comment">     */</span>
-</span><span id="615" class="l"><a class="l" href="#615">615: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="_SendMessage" href="#_SendMessage">SendMessage</a>(<span class="php-var">$message</span>)
-</span><span id="616" class="l"><a class="l" href="#616">616: </a>    {
-</span><span id="617" class="l"><a class="l" href="#617">617: </a>        <span class="php-var">$this</span>-&gt;signal_data-&gt;message = <span class="php-var">$message</span>;
-</span><span id="618" class="l"><a class="l" href="#618">618: </a>        
-</span><span id="619" class="l"><a class="l" href="#619">619: </a>        <span class="php-var">$this</span>-&gt;Send(
-</span><span id="620" class="l"><a class="l" href="#620">620: </a>            \Peg\Lib\Signals\Type\Definitions::IMPORT_MESSAGE,
-</span><span id="621" class="l"><a class="l" href="#621">621: </a>            <span class="php-var">$this</span>-&gt;signal_data
-</span><span id="622" class="l"><a class="l" href="#622">622: </a>        );
-</span><span id="623" class="l"><a class="l" href="#623">623: </a>    }
-</span><span id="624" class="l"><a class="l" href="#624">624: </a>
-</span><span id="625" class="l"><a class="l" href="#625">625: </a></span>}</code></pre>
+</span><span id="484" class="l"><a class="l" href="#484">484: </a>                        <span class="php-var">$class</span>-&gt;platforms = <span class="php-var">$methods</span>[<span class="php-quote">&quot;_platforms&quot;</span>];
+</span><span id="485" class="l"><a class="l" href="#485">485: </a>                        <span class="php-keyword1">unset</span>(<span class="php-var">$methods</span>[<span class="php-quote">&quot;_platforms&quot;</span>]);
+</span><span id="486" class="l"><a class="l" href="#486">486: </a>                    }
+</span><span id="487" class="l"><a class="l" href="#487">487: </a>                    
+</span><span id="488" class="l"><a class="l" href="#488">488: </a>                    <span class="php-comment">// Add methods</span>
+</span><span id="489" class="l"><a class="l" href="#489">489: </a>                    <span class="php-keyword1">foreach</span>(<span class="php-var">$methods</span> <span class="php-keyword1">as</span> <span class="php-var">$method_name</span> =&gt; <span class="php-var">$method_overloads</span>)
+</span><span id="490" class="l"><a class="l" href="#490">490: </a>                    {
+</span><span id="491" class="l"><a class="l" href="#491">491: </a>                        <span class="php-var">$method</span> = <span class="php-keyword1">new</span> Element\FunctionElement(<span class="php-var">$method_name</span>);
+</span><span id="492" class="l"><a class="l" href="#492">492: </a>                        
+</span><span id="493" class="l"><a class="l" href="#493">493: </a>                        <span class="php-keyword1">foreach</span>(<span class="php-var">$method_overloads</span> <span class="php-keyword1">as</span> <span class="php-var">$method_overload</span>)
+</span><span id="494" class="l"><a class="l" href="#494">494: </a>                        {
+</span><span id="495" class="l"><a class="l" href="#495">495: </a>                            <span class="php-var">$overload</span> = <span class="php-keyword1">new</span> Element\<span class="php-keyword2">Overload</span>(
+</span><span id="496" class="l"><a class="l" href="#496">496: </a>                                <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;description&quot;</span>]
+</span><span id="497" class="l"><a class="l" href="#497">497: </a>                            );
+</span><span id="498" class="l"><a class="l" href="#498">498: </a>
+</span><span id="499" class="l"><a class="l" href="#499">499: </a>                            <span class="php-var">$overload</span>-&gt;SetReturnType(
+</span><span id="500" class="l"><a class="l" href="#500">500: </a>                                <span class="php-keyword1">new</span> Element\ReturnType(
+</span><span id="501" class="l"><a class="l" href="#501">501: </a>                                    <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;return_type&quot;</span>]
+</span><span id="502" class="l"><a class="l" href="#502">502: </a>                                )
+</span><span id="503" class="l"><a class="l" href="#503">503: </a>                            );
+</span><span id="504" class="l"><a class="l" href="#504">504: </a>                            
+</span><span id="505" class="l"><a class="l" href="#505">505: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;constant&quot;</span>]))
+</span><span id="506" class="l"><a class="l" href="#506">506: </a>                                <span class="php-var">$overload</span>-&gt;<span class="php-keyword2">constant</span> = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;constant&quot;</span>];
+</span><span id="507" class="l"><a class="l" href="#507">507: </a>
+</span><span id="508" class="l"><a class="l" href="#508">508: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;static&quot;</span>]))
+</span><span id="509" class="l"><a class="l" href="#509">509: </a>                                <span class="php-var">$overload</span>-&gt;<span class="php-keyword1">static</span> = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;static&quot;</span>];
+</span><span id="510" class="l"><a class="l" href="#510">510: </a>
+</span><span id="511" class="l"><a class="l" href="#511">511: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;virtual&quot;</span>]))
+</span><span id="512" class="l"><a class="l" href="#512">512: </a>                                <span class="php-var">$overload</span>-&gt;<span class="php-keyword2">virtual</span> = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;virtual&quot;</span>];
+</span><span id="513" class="l"><a class="l" href="#513">513: </a>
+</span><span id="514" class="l"><a class="l" href="#514">514: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;pure_virtual&quot;</span>]))
+</span><span id="515" class="l"><a class="l" href="#515">515: </a>                                <span class="php-var">$overload</span>-&gt;pure_virtual = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;pure_virtual&quot;</span>];
+</span><span id="516" class="l"><a class="l" href="#516">516: </a>
+</span><span id="517" class="l"><a class="l" href="#517">517: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;protected&quot;</span>]))
+</span><span id="518" class="l"><a class="l" href="#518">518: </a>                                <span class="php-var">$overload</span>-&gt;<span class="php-keyword1">protected</span> = <span class="php-var">$method_overload</span>[<span class="php-quote">&quot;protected&quot;</span>];
+</span><span id="519" class="l"><a class="l" href="#519">519: </a>
+</span><span id="520" class="l"><a class="l" href="#520">520: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;parameters&quot;</span>]))
+</span><span id="521" class="l"><a class="l" href="#521">521: </a>                            {
+</span><span id="522" class="l"><a class="l" href="#522">522: </a>                                <span class="php-keyword1">foreach</span>(<span class="php-var">$method_overload</span>[<span class="php-quote">&quot;parameters&quot;</span>] <span class="php-keyword1">as</span> <span class="php-var">$parameter</span>)
+</span><span id="523" class="l"><a class="l" href="#523">523: </a>                                {
+</span><span id="524" class="l"><a class="l" href="#524">524: </a>                                    <span class="php-keyword1">if</span>(!<span class="php-keyword1">isset</span>(<span class="php-var">$parameter</span>[<span class="php-quote">&quot;value&quot;</span>]))
+</span><span id="525" class="l"><a class="l" href="#525">525: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;value&quot;</span>] = <span class="php-quote">&quot;&quot;</span>;
+</span><span id="526" class="l"><a class="l" href="#526">526: </a>                                    
+</span><span id="527" class="l"><a class="l" href="#527">527: </a>                                    <span class="php-keyword1">if</span>(!<span class="php-keyword1">isset</span>(<span class="php-var">$parameter</span>[<span class="php-quote">&quot;description&quot;</span>]))
+</span><span id="528" class="l"><a class="l" href="#528">528: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;description&quot;</span>] = <span class="php-quote">&quot;&quot;</span>;
+</span><span id="529" class="l"><a class="l" href="#529">529: </a>
+</span><span id="530" class="l"><a class="l" href="#530">530: </a>                                    <span class="php-var">$param</span> = <span class="php-keyword1">new</span> Element\Parameter(
+</span><span id="531" class="l"><a class="l" href="#531">531: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;name&quot;</span>], 
+</span><span id="532" class="l"><a class="l" href="#532">532: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;type&quot;</span>], 
+</span><span id="533" class="l"><a class="l" href="#533">533: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;value&quot;</span>],
+</span><span id="534" class="l"><a class="l" href="#534">534: </a>                                        <span class="php-var">$parameter</span>[<span class="php-quote">&quot;description&quot;</span>]
+</span><span id="535" class="l"><a class="l" href="#535">535: </a>                                    );
+</span><span id="536" class="l"><a class="l" href="#536">536: </a>
+</span><span id="537" class="l"><a class="l" href="#537">537: </a>                                    <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$parameter</span>[<span class="php-quote">&quot;is_array&quot;</span>]))
+</span><span id="538" class="l"><a class="l" href="#538">538: </a>                                    {
+</span><span id="539" class="l"><a class="l" href="#539">539: </a>                                        <span class="php-var">$param</span>-&gt;<span class="php-keyword2">is_array</span> = <span class="php-keyword1">true</span>;
+</span><span id="540" class="l"><a class="l" href="#540">540: </a>                                    }
+</span><span id="541" class="l"><a class="l" href="#541">541: </a>
+</span><span id="542" class="l"><a class="l" href="#542">542: </a>                                    <span class="php-var">$overload</span>-&gt;AddParameter(<span class="php-var">$param</span>);
+</span><span id="543" class="l"><a class="l" href="#543">543: </a>                                }
+</span><span id="544" class="l"><a class="l" href="#544">544: </a>                            }
+</span><span id="545" class="l"><a class="l" href="#545">545: </a>
+</span><span id="546" class="l"><a class="l" href="#546">546: </a>                            <span class="php-var">$method</span>-&gt;AddOverload(<span class="php-var">$overload</span>);
+</span><span id="547" class="l"><a class="l" href="#547">547: </a>                        }
+</span><span id="548" class="l"><a class="l" href="#548">548: </a>                        
+</span><span id="549" class="l"><a class="l" href="#549">549: </a>                        <span class="php-var">$class</span>-&gt;AddMethod(<span class="php-var">$method</span>);
+</span><span id="550" class="l"><a class="l" href="#550">550: </a>                    }
+</span><span id="551" class="l"><a class="l" href="#551">551: </a>                    
+</span><span id="552" class="l"><a class="l" href="#552">552: </a>                    <span class="php-comment">// Add enumerations</span>
+</span><span id="553" class="l"><a class="l" href="#553">553: </a>                    <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$enumerations_def</span>[<span class="php-var">$header</span>][<span class="php-var">$namespace</span>][<span class="php-var">$class_name</span>]))
+</span><span id="554" class="l"><a class="l" href="#554">554: </a>                    {
+</span><span id="555" class="l"><a class="l" href="#555">555: </a>                        <span class="php-keyword1">foreach</span>(<span class="php-var">$enumerations_def</span>[<span class="php-var">$header</span>][<span class="php-var">$namespace</span>][<span class="php-var">$class_name</span>] <span class="php-keyword1">as</span> <span class="php-var">$enumeration_name</span>=&gt;<span class="php-var">$enumeration_data</span>)
+</span><span id="556" class="l"><a class="l" href="#556">556: </a>                        {
+</span><span id="557" class="l"><a class="l" href="#557">557: </a>                            <span class="php-keyword1">if</span>(!<span class="php-keyword1">isset</span>(<span class="php-var">$enumeration_data</span>[<span class="php-quote">&quot;description&quot;</span>]))
+</span><span id="558" class="l"><a class="l" href="#558">558: </a>                                <span class="php-var">$enumeration_data</span>[<span class="php-quote">&quot;description&quot;</span>] = <span class="php-quote">&quot;&quot;</span>;
+</span><span id="559" class="l"><a class="l" href="#559">559: </a>                            
+</span><span id="560" class="l"><a class="l" href="#560">560: </a>                            <span class="php-var">$class</span>-&gt;AddEnumeration(
+</span><span id="561" class="l"><a class="l" href="#561">561: </a>                                <span class="php-keyword1">new</span> Element\Enumeration(
+</span><span id="562" class="l"><a class="l" href="#562">562: </a>                                    <span class="php-var">$enumeration_name</span>,
+</span><span id="563" class="l"><a class="l" href="#563">563: </a>                                    <span class="php-var">$enumeration_data</span>[<span class="php-quote">&quot;options&quot;</span>],
+</span><span id="564" class="l"><a class="l" href="#564">564: </a>                                    <span class="php-var">$enumeration_data</span>[<span class="php-quote">&quot;description&quot;</span>]
+</span><span id="565" class="l"><a class="l" href="#565">565: </a>                                )
+</span><span id="566" class="l"><a class="l" href="#566">566: </a>                            );
+</span><span id="567" class="l"><a class="l" href="#567">567: </a>                        }
+</span><span id="568" class="l"><a class="l" href="#568">568: </a>                    }
+</span><span id="569" class="l"><a class="l" href="#569">569: </a>                    
+</span><span id="570" class="l"><a class="l" href="#570">570: </a>                    <span class="php-comment">// Add variables</span>
+</span><span id="571" class="l"><a class="l" href="#571">571: </a>                    <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variables_def</span>[<span class="php-var">$header</span>][<span class="php-var">$namespace</span>][<span class="php-var">$class_name</span>]))
+</span><span id="572" class="l"><a class="l" href="#572">572: </a>                    {
+</span><span id="573" class="l"><a class="l" href="#573">573: </a>                        <span class="php-keyword1">foreach</span>(<span class="php-var">$variables_def</span>[<span class="php-var">$header</span>][<span class="php-var">$namespace</span>][<span class="php-var">$class_name</span>] <span class="php-keyword1">as</span> <span class="php-var">$variable_name</span>=&gt;<span class="php-var">$variable_options</span>)
+</span><span id="574" class="l"><a class="l" href="#574">574: </a>                        {
+</span><span id="575" class="l"><a class="l" href="#575">575: </a>                            <span class="php-var">$variable</span> = <span class="php-keyword1">new</span> Element\ClassVariable(
+</span><span id="576" class="l"><a class="l" href="#576">576: </a>                                <span class="php-var">$variable_name</span>, 
+</span><span id="577" class="l"><a class="l" href="#577">577: </a>                                <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;type&quot;</span>]
+</span><span id="578" class="l"><a class="l" href="#578">578: </a>                            );
+</span><span id="579" class="l"><a class="l" href="#579">579: </a>                            
+</span><span id="580" class="l"><a class="l" href="#580">580: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;static&quot;</span>]))
+</span><span id="581" class="l"><a class="l" href="#581">581: </a>                                <span class="php-var">$variable</span>-&gt;<span class="php-keyword1">static</span> = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;static&quot;</span>];
+</span><span id="582" class="l"><a class="l" href="#582">582: </a>
+</span><span id="583" class="l"><a class="l" href="#583">583: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;mutable&quot;</span>]))
+</span><span id="584" class="l"><a class="l" href="#584">584: </a>                                <span class="php-var">$variable</span>-&gt;mutable = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;mutable&quot;</span>];
+</span><span id="585" class="l"><a class="l" href="#585">585: </a>
+</span><span id="586" class="l"><a class="l" href="#586">586: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;protected&quot;</span>]))
+</span><span id="587" class="l"><a class="l" href="#587">587: </a>                                <span class="php-var">$variable</span>-&gt;<span class="php-keyword1">protected</span> = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;protected&quot;</span>];
+</span><span id="588" class="l"><a class="l" href="#588">588: </a>
+</span><span id="589" class="l"><a class="l" href="#589">589: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;public&quot;</span>]))
+</span><span id="590" class="l"><a class="l" href="#590">590: </a>                                <span class="php-var">$variable</span>-&gt;<span class="php-keyword1">public</span> = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;public&quot;</span>];
+</span><span id="591" class="l"><a class="l" href="#591">591: </a>                            
+</span><span id="592" class="l"><a class="l" href="#592">592: </a>                            <span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$variable_options</span>[<span class="php-quote">&quot;description&quot;</span>]))
+</span><span id="593" class="l"><a class="l" href="#593">593: </a>                                <span class="php-var">$variable</span>-&gt;description = <span class="php-var">$variable_options</span>[<span class="php-quote">&quot;description&quot;</span>];
+</span><span id="594" class="l"><a class="l" href="#594">594: </a>                            
+</span><span id="595" class="l"><a class="l" href="#595">595: </a>                            <span class="php-var">$class</span>-&gt;AddVariable(<span class="php-var">$variable</span>);
+</span><span id="596" class="l"><a class="l" href="#596">596: </a>                        }
+</span><span id="597" class="l"><a class="l" href="#597">597: </a>                    }
+</span><span id="598" class="l"><a class="l" href="#598">598: </a>                    
+</span><span id="599" class="l"><a class="l" href="#599">599: </a>                    <span class="php-var">$this</span>-&gt;symbols-&gt;headers[<span class="php-var">$header</span>]-&gt;AddClass(
+</span><span id="600" class="l"><a class="l" href="#600">600: </a>                        <span class="php-var">$class</span>,
+</span><span id="601" class="l"><a class="l" href="#601">601: </a>                        <span class="php-var">$namespace</span>
+</span><span id="602" class="l"><a class="l" href="#602">602: </a>                    );
+</span><span id="603" class="l"><a class="l" href="#603">603: </a>                }
+</span><span id="604" class="l"><a class="l" href="#604">604: </a>            }
+</span><span id="605" class="l"><a class="l" href="#605">605: </a>        }
+</span><span id="606" class="l"><a class="l" href="#606">606: </a>
+</span><span id="607" class="l"><a class="l" href="#607">607: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$classes_def</span>);
+</span><span id="608" class="l"><a class="l" href="#608">608: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$enumerations_def</span>);
+</span><span id="609" class="l"><a class="l" href="#609">609: </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$variables_def</span>);
+</span><span id="610" class="l"><a class="l" href="#610">610: </a>    }
+</span><span id="611" class="l"><a class="l" href="#611">611: </a>    
+</span><span id="612" class="l"><a class="l" href="#612">612: </a>    <span class="php-comment">/**
+</span></span><span id="613" class="l"><a class="l" href="#613">613: </a><span class="php-comment">     * Sends a signal with message of current task being performed.
+</span></span><span id="614" class="l"><a class="l" href="#614">614: </a><span class="php-comment">     * @param string $message
+</span></span><span id="615" class="l"><a class="l" href="#615">615: </a><span class="php-comment">     */</span>
+</span><span id="616" class="l"><a class="l" href="#616">616: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="_SendMessage" href="#_SendMessage">SendMessage</a>(<span class="php-var">$message</span>)
+</span><span id="617" class="l"><a class="l" href="#617">617: </a>    {
+</span><span id="618" class="l"><a class="l" href="#618">618: </a>        <span class="php-var">$this</span>-&gt;signal_data-&gt;message = <span class="php-var">$message</span>;
+</span><span id="619" class="l"><a class="l" href="#619">619: </a>        
+</span><span id="620" class="l"><a class="l" href="#620">620: </a>        <span class="php-var">$this</span>-&gt;Send(
+</span><span id="621" class="l"><a class="l" href="#621">621: </a>            \Peg\Lib\Signals\Type\Definitions::IMPORT_MESSAGE,
+</span><span id="622" class="l"><a class="l" href="#622">622: </a>            <span class="php-var">$this</span>-&gt;signal_data
+</span><span id="623" class="l"><a class="l" href="#623">623: </a>        );
+</span><span id="624" class="l"><a class="l" href="#624">624: </a>    }
+</span><span id="625" class="l"><a class="l" href="#625">625: </a>
+</span><span id="626" class="l"><a class="l" href="#626">626: </a></span>}</code></pre>
 
 	<div id="footer">
 		PEG Api API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>

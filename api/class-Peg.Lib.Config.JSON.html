@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Class Peg\Lib\Lexers\Doxygen | PEG Api</title>
+	<title>Class Peg\Lib\Config\JSON | PEG Api</title>
 
 	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
 	<script type="text/javascript" src="elementlist.js?2796630167"></script>
@@ -36,7 +36,7 @@
 							</ul></li></ul></li>
 				<li><a href="namespace-Peg.Lib.CommandLine.html">CommandLine</a>
 						</li>
-				<li><a href="namespace-Peg.Lib.Config.html">Config</a>
+				<li class="active"><a href="namespace-Peg.Lib.Config.html">Config</a>
 						</li>
 				<li><a href="namespace-Peg.Lib.Definitions.html">Definitions<span></span></a>
 						<ul>
@@ -45,7 +45,7 @@
 							</ul></li>
 				<li><a href="namespace-Peg.Lib.Generator.html">Generator</a>
 						</li>
-				<li class="active"><a href="namespace-Peg.Lib.Lexers.html">Lexers</a>
+				<li><a href="namespace-Peg.Lib.Lexers.html">Lexers</a>
 						</li>
 				<li><a href="namespace-Peg.Lib.Localization.html">Localization</a>
 						</li>
@@ -77,8 +77,9 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Peg.Lib.Lexers.Base.html">Base</a></li>
-				<li class="active"><a href="class-Peg.Lib.Lexers.Doxygen.html">Doxygen</a></li>
+				<li><a href="class-Peg.Lib.Config.Base.html">Base</a></li>
+				<li><a href="class-Peg.Lib.Config.INI.html">INI</a></li>
+				<li class="active"><a href="class-Peg.Lib.Config.JSON.html">JSON</a></li>
 			</ul>
 
 
@@ -106,7 +107,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="namespace-Peg.Lib.Lexers.html" title="Summary of Peg\Lib\Lexers"><span>Namespace</span></a>
+				<a href="namespace-Peg.Lib.Config.html" title="Summary of Peg\Lib\Config"><span>Namespace</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -124,32 +125,25 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class Doxygen</h1>
+	<h1>Class JSON</h1>
 
 
 	<div class="description">
 	
-<p>Implements a doxygen xml extractor of definitions.</p>
+<p>Json implementation to manage configuration files.</p>
 
 	</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-			<a href="class-Peg.Lib.Signals.Signal.html"><span>Peg\Lib\Signals\Signal</span></a>
+			<a href="class-Peg.Lib.Config.Base.html"><span>Peg\Lib\Config\Base</span></a>
 			
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by" />
-			<a href="class-Peg.Lib.Lexers.Base.html"><span>Peg\Lib\Lexers\Base</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:60px">
-			<img src="resources/inherit.png" alt="Extended by" />
-<b><span>Peg\Lib\Lexers\Doxygen</span></b>			
+<b><span>Peg\Lib\Config\JSON</span></b>			
 			
 			
 		</dd>
@@ -165,17 +159,17 @@
 	<div class="info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a>\<a href="namespace-Peg.Lib.Lexers.html">Lexers</a><br />
+		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a>\<a href="namespace-Peg.Lib.Config.html">Config</a><br />
 		
 
-		<b>Located at</b> <a href="source-class-Peg.Lib.Lexers.Doxygen.html#15-1145" title="Go to source code">Lexers/Doxygen.php</a><br />
+		<b>Located at</b> <a href="source-class-Peg.Lib.Config.JSON.html#10-49" title="Go to source code">Config/JSON.php</a><br />
 	</div>
 
 
 
 	<table class="summary" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="Start" id="_Start">
+	<tr data-order="Load" id="_Load">
 
 		<td class="attributes"><code>
 			 public 
@@ -185,18 +179,60 @@
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_Start">#</a>
-		<code><a href="source-class-Peg.Lib.Lexers.Doxygen.html#27-44" title="Go to source code">Start</a>( )</code>
+		<a class="anchor" href="#_Load">#</a>
+		<code><a href="source-class-Peg.Lib.Config.JSON.html#16-36" title="Go to source code">Load</a>( <span>string <var>$directory</var></span>, <span>string <var>$configuration_file</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Initializes the parsing process</p>
+<p>Loads all configuration options of a given file and creates it if does not
+exists.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Initializes the parsing process</p>
+<p>Loads all configuration options of a given file and creates it if does not
+exists.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$directory</var></dt>
+					<dd><code>string</code><br>$directory</dd>
+					<dt><var>$configuration_file</var></dt>
+					<dd><code>string</code><br>$configuration_file</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="Write" id="_Write">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_Write">#</a>
+		<code><a href="source-class-Peg.Lib.Config.JSON.html#38-47" title="Go to source code">Write</a>( )</code>
+
+		<div class="description short">
+			
+<p>Writes a configuration file using the settings array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Writes a configuration file using the settings array.</p>
 
 
 
@@ -211,22 +247,14 @@
 	</table>
 
 	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Peg.Lib.Lexers.Base.html#methods">Peg\Lib\Lexers\Base</a></caption>
+	<caption>Methods inherited from <a href="class-Peg.Lib.Config.Base.html#methods">Peg\Lib\Config\Base</a></caption>
 	<tr>
 		<td><code>
-			<a href="class-Peg.Lib.Lexers.Base.html#_SaveDefinitions">SaveDefinitions()</a>, 
-			<a href="class-Peg.Lib.Lexers.Base.html#_SendMessage">SendMessage()</a>, 
-			<a href="class-Peg.Lib.Lexers.Base.html#___construct">__construct()</a>
-		</code></td>
-	</tr>
-	</table>
-	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Peg.Lib.Signals.Signal.html#methods">Peg\Lib\Signals\Signal</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-Peg.Lib.Signals.Signal.html#_Listen">Listen()</a>, 
-			<a href="class-Peg.Lib.Signals.Signal.html#_Send">Send()</a>, 
-			<a href="class-Peg.Lib.Signals.Signal.html#_Unlisten">Unlisten()</a>
+			<a href="class-Peg.Lib.Config.Base.html#_Get">Get()</a>, 
+			<a href="class-Peg.Lib.Config.Base.html#_GetAll">GetAll()</a>, 
+			<a href="class-Peg.Lib.Config.Base.html#_GetGroupValue">GetGroupValue()</a>, 
+			<a href="class-Peg.Lib.Config.Base.html#_Set">Set()</a>, 
+			<a href="class-Peg.Lib.Config.Base.html#_SetGroupValue">SetGroupValue()</a>
 		</code></td>
 	</tr>
 	</table>
@@ -243,14 +271,12 @@
 
 
 	<table class="summary inherited">
-	<caption>Properties inherited from <a href="class-Peg.Lib.Lexers.Base.html#properties">Peg\Lib\Lexers\Base</a></caption>
+	<caption>Properties inherited from <a href="class-Peg.Lib.Config.Base.html#properties">Peg\Lib\Config\Base</a></caption>
 	<tr>
 		<td><code>
-			<a href="class-Peg.Lib.Lexers.Base.html#$definitions_path"><var>$definitions_path</var></a>, 
-			<a href="class-Peg.Lib.Lexers.Base.html#$exporter"><var>$exporter</var></a>, 
-			<a href="class-Peg.Lib.Lexers.Base.html#$headers_path"><var>$headers_path</var></a>, 
-			<a href="class-Peg.Lib.Lexers.Base.html#$signal_data"><var>$signal_data</var></a>, 
-			<a href="class-Peg.Lib.Lexers.Base.html#$symbols"><var>$symbols</var></a>
+			<a href="class-Peg.Lib.Config.Base.html#$directory"><var>$directory</var></a>, 
+			<a href="class-Peg.Lib.Config.Base.html#$file"><var>$file</var></a>, 
+			<a href="class-Peg.Lib.Config.Base.html#$preferences"><var>$preferences</var></a>
 		</code></td>
 	</tr>
 	</table>

@@ -7,7 +7,7 @@
 	<title>Todo | PEG Api</title>
 
 	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
-	<script type="text/javascript" src="elementlist.js?1262886233"></script>
+	<script type="text/javascript" src="elementlist.js?2796630167"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -96,6 +96,7 @@
 				<li><a href="class-Peg.Lib.CommandLine.Parser.html">Peg\Lib\CommandLine\Parser</a></li>
 				<li><a href="class-Peg.Lib.Config.Base.html">Peg\Lib\Config\Base</a></li>
 				<li><a href="class-Peg.Lib.Config.INI.html">Peg\Lib\Config\INI</a></li>
+				<li><a href="class-Peg.Lib.Config.JSON.html">Peg\Lib\Config\JSON</a></li>
 				<li><a href="class-Peg.Lib.Definitions.Element.ClassElement.html">Peg\Lib\Definitions\Element\ClassElement</a></li>
 				<li><a href="class-Peg.Lib.Definitions.Element.ClassVariable.html">Peg\Lib\Definitions\Element\ClassVariable</a></li>
 				<li><a href="class-Peg.Lib.Definitions.Element.Constant.html">Peg\Lib\Definitions\Element\Constant</a></li>
@@ -192,44 +193,24 @@
 	<caption>Methods summary</caption>
 	<tr>
 		<td class="name" rowspan="1"><a href="class-Peg.Lib.Definitions.Symbols.html">Peg\Lib\Definitions\Symbols</a></td>
-		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Definitions.Symbols.html#_GetStandardType">GetStandardType()</a></code></td>
-		<td>Finish implementing this.
+		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Definitions.Symbols.html#_GetPHPStandardType">GetPHPStandardType()</a></code></td>
+		<td>Add hook|signal so a plugin can modify the returned type.
 <!-- by Texy2! --></td>
 	</tr>
 	<tr>
 		<td class="name" rowspan="1"><a href="class-Peg.Lib.Definitions.Symbols.html">Peg\Lib\Definitions\Symbols</a></td>
+		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Definitions.Symbols.html#_GetStandardType">GetStandardType()</a></code></td>
+		<td>Add hook|signal so a plugin can modify the returned type.</td>
+	</tr>
+	<tr>
+		<td class="name" rowspan="1"><a href="class-Peg.Lib.Definitions.Symbols.html">Peg\Lib\Definitions\Symbols</a></td>
 		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Definitions.Symbols.html#_HasClass">HasClass()</a></code></td>
-		<td>Resolve namespaces that are part of the name.</td>
-	</tr>
-	<tr>
-		<td class="name" rowspan="1"><a href="class-Peg.Lib.Definitions.Symbols.html">Peg\Lib\Definitions\Symbols</a></td>
-		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Definitions.Symbols.html#_HasEnumeration">HasEnumeration()</a></code></td>
-		<td>Resolve namespaces that are part of the name.</td>
-	</tr>
-	<tr>
-		<td class="name" rowspan="1"><a href="class-Peg.Lib.Definitions.Symbols.html">Peg\Lib\Definitions\Symbols</a></td>
-		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Definitions.Symbols.html#_HasFunction">HasFunction()</a></code></td>
-		<td>Resolve namespaces that are part of the name.</td>
-	</tr>
-	<tr>
-		<td class="name" rowspan="1"><a href="class-Peg.Lib.Definitions.Symbols.html">Peg\Lib\Definitions\Symbols</a></td>
-		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Definitions.Symbols.html#_HasGlobalVariable">HasGlobalVariable()</a></code></td>
-		<td>Resolve namespaces that are part of the name.</td>
+		<td>Resolve classes that are part of the name.</td>
 	</tr>
 	<tr>
 		<td class="name" rowspan="1"><a href="class-Peg.Lib.Definitions.Symbols.html">Peg\Lib\Definitions\Symbols</a></td>
 		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Definitions.Symbols.html#_HasTypeDef">HasTypeDef()</a></code></td>
-		<td>Resolve namespaces that are part of the name.</td>
-	</tr>
-	<tr>
-		<td class="name" rowspan="1"><a href="class-Peg.Lib.Generator.ZendPHP.html">Peg\Lib\Generator\ZendPHP</a></td>
-		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Generator.ZendPHP.html#_GenerateHeader">GenerateHeader()</a></code></td>
-		<td>Handle namespaces.</td>
-	</tr>
-	<tr>
-		<td class="name" rowspan="1"><a href="class-Peg.Lib.Generator.ZendPHP.html">Peg\Lib\Generator\ZendPHP</a></td>
-		<td class="name" rowspan="1"><code><a href="class-Peg.Lib.Generator.ZendPHP.html#_GenerateSource">GenerateSource()</a></code></td>
-		<td>Handle namespaces.</td>
+		<td>Resolve classes that are part of the name.</td>
 	</tr>
 	<tr>
 		<td class="name" rowspan="1"><a href="class-Peg.Lib.Generator.ZendPHP.html">Peg\Lib\Generator\ZendPHP</a></td>

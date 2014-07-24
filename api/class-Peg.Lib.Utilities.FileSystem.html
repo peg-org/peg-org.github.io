@@ -7,7 +7,7 @@
 	<title>Class Peg\Lib\Utilities\FileSystem | PEG Api</title>
 
 	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
-	<script type="text/javascript" src="elementlist.js?1262886233"></script>
+	<script type="text/javascript" src="elementlist.js?2796630167"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -147,7 +147,7 @@
 		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a>\<a href="namespace-Peg.Lib.Utilities.html">Utilities</a><br />
 		
 
-		<b>Located at</b> <a href="source-class-Peg.Lib.Utilities.FileSystem.html#10-184" title="Go to source code">Utilities/FileSystem.php</a><br />
+		<b>Located at</b> <a href="source-class-Peg.Lib.Utilities.FileSystem.html#10-210" title="Go to source code">Utilities/FileSystem.php</a><br />
 	</div>
 
 
@@ -326,6 +326,54 @@ the target directory if already exist.</p>
 				<h4>Returns</h4>
 				<div class="list">
 					<code>boolean</code><br>True on success or false.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="WriteFileIfDifferent" id="_WriteFileIfDifferent">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_WriteFileIfDifferent">#</a>
+		<code><a href="source-class-Peg.Lib.Utilities.FileSystem.html#184-208" title="Go to source code">WriteFileIfDifferent</a>( <span>string <var>$file</var></span>, <span>string <var>&amp; $contents</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Only saves content to a file if the new content is not the same as the
+original. This is helpful to prevent an unneccesary timestamp modification which
+is used by compilers to decide wether the file needs recompilation.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Only saves content to a file if the new content is not the same as the
+original. This is helpful to prevent an unneccesary timestamp modification which
+is used by compilers to decide wether the file needs recompilation.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><code>string</code><br>$file Path to file.</dd>
+					<dt><var>$contents</var></dt>
+					<dd><code>string</code><br>$content New content of file.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True on success or false if file content is the same.<br />
 				</div>
 
 
