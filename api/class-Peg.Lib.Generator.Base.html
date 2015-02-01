@@ -7,7 +7,7 @@
 	<title>Class Peg\Lib\Generator\Base | PEG Api</title>
 
 	<script type="text/javascript" src="resources/combined.js?1746355195"></script>
-	<script type="text/javascript" src="elementlist.js?2796630167"></script>
+	<script type="text/javascript" src="elementlist.js?917351065"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -21,23 +21,39 @@
 		<div id="groups">
 			<h3>Namespaces</h3>
 			<ul>
+				<li><a href="namespace-None.html">None</a>
+						</li>
 				<li class="active"><a href="namespace-Peg.html">Peg<span></span></a>
 						<ul>
-				<li class="active"><a href="namespace-Peg.Lib.html">Lib<span></span></a>
+				<li><a href="namespace-Peg.Cli.html">Cli<span></span></a>
 						<ul>
-				<li><a href="namespace-Peg.Lib.Command.html">Command<span></span></a>
-						<ul>
-				<li><a href="namespace-Peg.Lib.Command.Action.html">Action<span></span></a>
-						<ul>
-				<li><a href="namespace-Peg.Lib.Command.Action.Generate.html">Generate</a>
+				<li><a href="namespace-Peg.Cli.Commands.html">Commands</a>
 						</li>
-				<li><a href="namespace-Peg.Lib.Command.Action.Parse.html">Parse</a>
+							</ul></li>
+				<li><a href="namespace-Peg.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-Peg.Custom.html">Custom<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Custom.Command.html">Command<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Custom.Command.Action.html">Action<span></span></a>
+						<ul>
+				<li><a href="namespace-Peg.Custom.Command.Action.Generate.html">Generate</a>
+						</li>
+				<li><a href="namespace-Peg.Custom.Command.Action.Parse.html">Parse</a>
 						</li>
 							</ul></li></ul></li>
-				<li><a href="namespace-Peg.Lib.CommandLine.html">CommandLine</a>
+				<li><a href="namespace-Peg.Custom.CommandLine.html">CommandLine</a>
 						</li>
-				<li><a href="namespace-Peg.Lib.Config.html">Config</a>
+				<li><a href="namespace-Peg.Custom.Config.html">Config</a>
 						</li>
+				<li><a href="namespace-Peg.Custom.Localization.html">Localization</a>
+						</li>
+				<li><a href="namespace-Peg.Custom.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Peg.Lib.html">Lib<span></span></a>
+						<ul>
 				<li><a href="namespace-Peg.Lib.Definitions.html">Definitions<span></span></a>
 						<ul>
 				<li><a href="namespace-Peg.Lib.Definitions.Element.html">Element</a>
@@ -46,8 +62,6 @@
 				<li class="active"><a href="namespace-Peg.Lib.Generator.html">Generator</a>
 						</li>
 				<li><a href="namespace-Peg.Lib.Lexers.html">Lexers</a>
-						</li>
-				<li><a href="namespace-Peg.Lib.Localization.html">Localization</a>
 						</li>
 				<li><a href="namespace-Peg.Lib.Plugins.html">Plugins</a>
 						</li>
@@ -62,10 +76,7 @@
 							</ul></li>
 				<li><a href="namespace-Peg.Lib.Signals.Type.html">Type</a>
 						</li>
-							</ul></li>
-				<li><a href="namespace-Peg.Lib.Utilities.html">Utilities</a>
-						</li>
-							</ul></li></ul></li>
+							</ul></li></ul></li></ul></li>
 				<li><a href="namespace-PHP.html">PHP</a>
 						</li>
 			</ul>
@@ -151,7 +162,7 @@
 		<b>Namespace:</b> <a href="namespace-Peg.html">Peg</a>\<a href="namespace-Peg.Lib.html">Lib</a>\<a href="namespace-Peg.Lib.Generator.html">Generator</a><br />
 		
 
-		<b>Located at</b> <a href="source-class-Peg.Lib.Generator.Base.html#10-568" title="Go to source code">Generator/Base.php</a><br />
+		<b>Located at</b> <a href="source-class-Peg.Lib.Generator.Base.html#10-608" title="Go to source code">src/Generator/Base.php</a><br />
 	</div>
 
 
@@ -421,7 +432,7 @@ stripped out.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetTemplatePath">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#173-224" title="Go to source code">GetTemplatePath</a>( <span>string <var>$name</var></span>, <span>string <var>$type</var></span>, <span>string <var>$subtype</var></span>, <span>string <var>$dir</var></span>, <span>string <var>$overrides_prefix</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span> </span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#173-227" title="Go to source code">GetTemplatePath</a>( <span>string <var>$name</var></span>, <span>string <var>$type</var></span>, <span>string <var>$subtype</var></span>, <span>string <var>$dir</var></span>, <span>string <var>$overrides_prefix</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -473,7 +484,7 @@ stripped out.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetGenericTemplate">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#226-241" title="Go to source code">GetGenericTemplate</a>( <span>string <var>$name</var></span>, <span>string <var>$subdir</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#229-244" title="Go to source code">GetGenericTemplate</a>( <span>string <var>$name</var></span>, <span>string <var>$subdir</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -517,7 +528,7 @@ stripped out.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetParameterTemplate">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#243-354" title="Go to source code">GetParameterTemplate</a>( <span><code><a href="class-Peg.Lib.Definitions.Element.Parameter.html">Peg\Lib\Definitions\Element\Parameter</a></code> <var>$parameter</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$type</var> = <span class="php-quote">&quot;declare&quot;</span> </span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#246-357" title="Go to source code">GetParameterTemplate</a>( <span><code><a href="class-Peg.Lib.Definitions.Element.Parameter.html">Peg\Lib\Definitions\Element\Parameter</a></code> <var>$parameter</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$type</var> = <span class="php-quote">&quot;declare&quot;</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -566,7 +577,7 @@ object_validate.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GetReturnTemplate">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#356-466" title="Go to source code">GetReturnTemplate</a>( <span><code><a href="class-Peg.Lib.Definitions.Element.ReturnType.html">Peg\Lib\Definitions\Element\ReturnType</a></code> <var>$return</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$type</var> = <span class="php-quote">&quot;function&quot;</span> </span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#359-469" title="Go to source code">GetReturnTemplate</a>( <span><code><a href="class-Peg.Lib.Definitions.Element.ReturnType.html">Peg\Lib\Definitions\Element\ReturnType</a></code> <var>$return</var></span>, <span>string <var>$namespace</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$type</var> = <span class="php-quote">&quot;function&quot;</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -614,7 +625,7 @@ and returns that instead.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_RemoveHeader">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#468-489" title="Go to source code">RemoveHeader</a>( <span>string <var>$header_name</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#471-492" title="Go to source code">RemoveHeader</a>( <span>string <var>$header_name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -652,7 +663,7 @@ and returns that instead.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_AddHeader">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#491-504" title="Go to source code">AddHeader</a>( <span>string <var>$header_name</var></span>, <span>string <var>&amp; $content</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#494-520" title="Go to source code">AddHeader</a>( <span>string <var>$header_name</var></span>, <span>string <var>&amp; $content</var></span>, <span>string <var>$subdir</var> = <span class="php-quote">&quot;includes&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -672,6 +683,8 @@ and returns that instead.</p>
 					<dd><code>string</code><br>$header_name Original name of header.</dd>
 					<dt><var>$content</var></dt>
 					<dd><code>string</code><br>$content</dd>
+					<dt><var>$subdir</var></dt>
+					<dd><code>string</code><br>$subdir</dd>
 				</dl></div>
 
 
@@ -692,7 +705,7 @@ and returns that instead.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_AddSource">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#506-519" title="Go to source code">AddSource</a>( <span>string <var>$header_name</var></span>, <span>string <var>&amp; $content</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#522-548" title="Go to source code">AddSource</a>( <span>string <var>$header_name</var></span>, <span>string <var>&amp; $content</var></span>, <span>string <var>$subdir</var> = <span class="php-quote">&quot;src&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -712,6 +725,8 @@ and returns that instead.</p>
 					<dd><code>string</code><br>$header_name Original name of header.</dd>
 					<dt><var>$content</var></dt>
 					<dd><code>string</code><br>$content</dd>
+					<dt><var>$subdir</var></dt>
+					<dd><code>string</code><br>$subdir</dd>
 				</dl></div>
 
 
@@ -732,7 +747,7 @@ and returns that instead.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_AddGenericFile">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#521-550" title="Go to source code">AddGenericFile</a>( <span>string <var>$file_name</var></span>, <span>string <var>&amp; $content</var></span>, <span>string <var>$subdir</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#550-579" title="Go to source code">AddGenericFile</a>( <span>string <var>$file_name</var></span>, <span>string <var>&amp; $content</var></span>, <span>string <var>$subdir</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 		<div class="description short">
 			
@@ -774,7 +789,7 @@ and returns that instead.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_Start">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#552-555" title="Go to source code">Start</a>( )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#581-584" title="Go to source code">Start</a>( )</code>
 
 		<div class="description short">
 			
@@ -800,14 +815,14 @@ and returns that instead.</p>
 
 		<td class="attributes"><code>
 			abstract public 
-			
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GenerateHeader">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#557-561" title="Go to source code">GenerateHeader</a>( <span>string <var>$header_name</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#586-591" title="Go to source code">GenerateHeader</a>( <span>string <var>$header_name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -827,6 +842,10 @@ and returns that instead.</p>
 					<dd><code>string</code><br>$header_name</dd>
 				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Source code.<br />
+				</div>
 
 
 
@@ -838,14 +857,14 @@ and returns that instead.</p>
 
 		<td class="attributes"><code>
 			abstract public 
-			
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_GenerateSource">#</a>
-		<code><a href="source-class-Peg.Lib.Generator.Base.html#563-567" title="Go to source code">GenerateSource</a>( <span>string <var>$header_name</var></span> )</code>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#593-598" title="Go to source code">GenerateSource</a>( <span>string <var>$header_name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -865,6 +884,52 @@ and returns that instead.</p>
 					<dd><code>string</code><br>$header_name</dd>
 				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Source code.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="GenerateFunction" id="_GenerateFunction">
+
+		<td class="attributes"><code>
+			abstract public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_GenerateFunction">#</a>
+		<code><a href="source-class-Peg.Lib.Generator.Base.html#600-607" title="Go to source code">GenerateFunction</a>( <span><code><a href="class-Peg.Lib.Definitions.Element.FunctionElement.html">Peg\Lib\Definitions\Element\FunctionElement</a></code> <var>$function_object</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Generate the wrapping code of a specific C/C++ function.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generate the wrapping code of a specific C/C++ function.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function_object</var></dt>
+					<dd><code><code><a href="class-Peg.Lib.Definitions.Element.FunctionElement.html">Peg\Lib\Definitions\Element\FunctionElement</a></code></code><br>$function_object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Source code.<br />
+				</div>
 
 
 
