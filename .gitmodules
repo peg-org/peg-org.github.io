@@ -1,0 +1,11 @@
+[submodule "peg-src"]
+	path = peg-src
+	url = https://github.com/peg-org/peg-src
+    
+[submodule "peg-custom"]
+	path = peg-custom
+	url = https://github.com/peg-org/peg-custom
+    
+[submodule "peg-cli"]
+	path = peg-cli
+	url = https://github.com/peg-org/peg-cli
